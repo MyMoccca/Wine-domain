@@ -1,0 +1,16 @@
+.form-container {
+  @include form-container;
+  margin-top: 10%;
+}
+
+.form-label {
+  @include form-container-label;
+}
+
+.basic-input {
+  @include basic-input($background-black);
+}
+
+.basic-input:hover {
+  @include basic-input-hover($background-black);
+}

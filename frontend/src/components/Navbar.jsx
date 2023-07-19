@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -32,16 +34,16 @@ function Navbar() {
               onClick={() => setNavOpen(!navOpen)}
               style={{
                 top: navOpen ? "0" : "70px",
-                transitionDelay: navOpen ? "0.5s" : "0s",
+                transitionDelay: navOpen ? "0.6s" : "0s",
               }}
             >
-              Home
+              Accueil
             </Link>
             <div className="nav-item-wrapper" />
           </li>
           <li className="nav-item">
             <Link
-              to="/about"
+              to="/domaine"
               className="nav-link"
               onClick={() => setNavOpen(!navOpen)}
               style={{
@@ -49,13 +51,13 @@ function Navbar() {
                 transitionDelay: navOpen ? "0.6s" : "0s",
               }}
             >
-              about
+              Notre domaine
             </Link>
             <div className="nav-item-wrapper" />
           </li>
           <li className="nav-item">
             <Link
-              to="/history"
+              to="/terroir"
               className="nav-link"
               onClick={() => setNavOpen(!navOpen)}
               style={{
@@ -63,7 +65,35 @@ function Navbar() {
                 transitionDelay: navOpen ? "0.7s" : "0s",
               }}
             >
-              history
+              Le terroir
+            </Link>
+            <div className="nav-item-wrapper" />
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/vins"
+              className="nav-link"
+              onClick={() => setNavOpen(!navOpen)}
+              style={{
+                top: navOpen ? "0" : "70px",
+                transitionDelay: navOpen ? "0.5s" : "0s",
+              }}
+            >
+              Nos vins
+            </Link>
+            <div className="nav-item-wrapper" />
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/articles"
+              className="nav-link"
+              onClick={() => setNavOpen(!navOpen)}
+              style={{
+                top: navOpen ? "0" : "70px",
+                transitionDelay: navOpen ? "0.7s" : "0s",
+              }}
+            >
+              Blog
             </Link>
             <div className="nav-item-wrapper" />
           </li>
@@ -77,19 +107,11 @@ function Navbar() {
                 transitionDelay: navOpen ? "0.8s" : "0s",
               }}
             >
-              contact
+              Nous trouver
             </Link>
             <div className="nav-item-wrapper" />
           </li>
         </ul>
-        <div className="nav-footer">
-          <div className="location">
-            <span>Suivez nous</span>
-          </div>
-          <div className="nav-social-media">
-            <ul></ul>
-          </div>
-        </div>
       </div>
     </div>
   );
