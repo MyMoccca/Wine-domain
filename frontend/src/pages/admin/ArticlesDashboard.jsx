@@ -101,16 +101,19 @@ function Admindashboard() {
   }, []);
 
   return (
-    <div className="container">
-      <div className="row">
-        <label htmlFor="article" className="mx-2 px-4">
+    <div className="admin-container">
+      <div>
+        <label htmlFor="article" className="form-label-item">
           Modifier un article
           <select
+            className="basic-input-item select-item"
             name="article"
             id="article"
             onChange={(e) => getArticleToUpdate(e)}
           >
-            <option value="none">Nouveau article</option>
+            <option value="none" className="basic-input-item">
+              Nouveau article
+            </option>
             {articlesToUpdate.map((art) => (
               <option key={art.id} value={art.id}>
                 {art.title}
@@ -119,158 +122,160 @@ function Admindashboard() {
           </select>
         </label>
       </div>
-      <form onSubmit={manageArticle} className="row mx-auto">
-        <div className="form-group">
-          <label>
-            Titre
-            <input
-              className="form-control"
-              type="text"
-              required
-              minLength={1}
-              maxLength={255}
-              value={article.title}
-              name="title"
-              onChange={(event) =>
-                handleArticle(event.target.name, event.target.value)
-              }
-            />
-          </label>
-        </div>
-        <div className="form-group">
-          <label>
-            Sous titre
-            <input
-              className="form-control"
-              type="text"
-              required
-              minLength={1}
-              maxLength={255}
-              value={article.subtitle}
-              name="subtitle"
-              onChange={(event) =>
-                handleArticle(event.target.name, event.target.value)
-              }
-            />
-          </label>
-        </div>
-        <div className="form-group">
-          <label>
-            Résumé
-            <textarea
-              className="form-control"
-              required
-              minLength={1}
-              value={article.resume}
-              name="resume"
-              onChange={(event) =>
-                handleArticle(event.target.name, event.target.value)
-              }
-            />
-          </label>
-        </div>
-        <div className="form-group">
-          <label>
-            Texte
-            <textarea
-              className="form-control"
-              required
-              minLength={1}
-              value={article.text}
-              name="text"
-              onChange={(event) =>
-                handleArticle(event.target.name, event.target.value)
-              }
-            />
-          </label>
-        </div>
-        <div className="form-group">
-          <label>
-            Lien de l'image
-            <input
-              type="url"
-              className="form-control"
-              required
-              maxLength={255}
-              value={article.src}
-              name="src"
-              onChange={(event) =>
-                handleArticle(event.target.name, event.target.value)
-              }
-            />
-          </label>
-        </div>
-        <div className="form-group">
-          <label>
-            Texte alternatif
-            <input
-              type="text"
-              className="form-control"
-              required
-              maxLength={255}
-              minLength={1}
-              value={article.alt}
-              name="alt"
-              onChange={(event) =>
-                handleArticle(event.target.name, event.target.value)
-              }
-            />
-          </label>
-        </div>
-        {!article.id && (
-          <div className="row">
-            <button type="submit" className="btn btn-secondary col-5 m-2">
-              Valider
-            </button>
-            <button
-              type="button"
-              className="btn btn-secondary col-5 m-2"
-              onClick={(e) => {
-                e.preventDefault();
-                setArticle(articleModel);
-              }}
-            >
-              Annuler
-            </button>
+      <div className="main-form-container">
+        <form onSubmit={manageArticle} className="form-container-items">
+          <div className="form-group">
+            <label className="form-label-item">
+              Titre
+              <input
+                className="basic-input-item"
+                type="text"
+                required
+                minLength={1}
+                maxLength={255}
+                value={article.title}
+                name="title"
+                onChange={(event) =>
+                  handleArticle(event.target.name, event.target.value)
+                }
+              />
+            </label>
           </div>
-        )}
-        {article.id && (
-          <div className="row">
-            <button type="submit" className="btn btn-secondary col-3 m-2">
-              Modifier
-            </button>
-            <button
-              type="button"
-              onClick={(e) => deleteArticle(e)}
-              className="btn btn-secondary col-3 m-2"
-            >
-              Supprimer
-            </button>
-            <button
-              type="button"
-              className="btn btn-secondary col-3 m-2"
-              onClick={(e) => {
-                e.preventDefault();
-                setArticle(articleModel);
-              }}
-            >
-              Annuler
-            </button>
+          <div className="form-group">
+            <label className="form-label-item">
+              Sous titre
+              <input
+                className="basic-input-item"
+                type="text"
+                required
+                minLength={1}
+                maxLength={255}
+                value={article.subtitle}
+                name="subtitle"
+                onChange={(event) =>
+                  handleArticle(event.target.name, event.target.value)
+                }
+              />
+            </label>
           </div>
-        )}
-      </form>
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+          <div className="form-group">
+            <label className="form-label-item">
+              Résumé
+              <textarea
+                className="basic-input-item"
+                required
+                minLength={1}
+                value={article.resume}
+                name="resume"
+                onChange={(event) =>
+                  handleArticle(event.target.name, event.target.value)
+                }
+              />
+            </label>
+          </div>
+          <div className="form-group">
+            <label className="form-label-item">
+              Texte
+              <textarea
+                className="basic-input-item"
+                required
+                minLength={1}
+                value={article.text}
+                name="text"
+                onChange={(event) =>
+                  handleArticle(event.target.name, event.target.value)
+                }
+              />
+            </label>
+          </div>
+          <div className="form-group">
+            <label className="form-label-item">
+              Lien de l'image
+              <input
+                type="url"
+                className="basic-input-item"
+                required
+                maxLength={255}
+                value={article.src}
+                name="src"
+                onChange={(event) =>
+                  handleArticle(event.target.name, event.target.value)
+                }
+              />
+            </label>
+          </div>
+          <div className="form-group">
+            <label className="form-label-item">
+              Texte alternatif
+              <input
+                type="text"
+                className="basic-input-item"
+                required
+                maxLength={255}
+                minLength={1}
+                value={article.alt}
+                name="alt"
+                onChange={(event) =>
+                  handleArticle(event.target.name, event.target.value)
+                }
+              />
+            </label>
+          </div>
+          {!article.id && (
+            <div className="row">
+              <button type="submit" className="admin-btn">
+                Valider
+              </button>
+              <button
+                type="button"
+                className="admin-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setArticle(articleModel);
+                }}
+              >
+                Annuler
+              </button>
+            </div>
+          )}
+          {article.id && (
+            <div className="row">
+              <button type="submit" className="admin-btn">
+                Modifier
+              </button>
+              <button
+                type="button"
+                onClick={(e) => deleteArticle(e)}
+                className="admin-btn"
+              >
+                Supprimer
+              </button>
+              <button
+                type="button"
+                className="admin-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setArticle(articleModel);
+                }}
+              >
+                Annuler
+              </button>
+            </div>
+          )}
+        </form>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+      </div>
     </div>
   );
 }

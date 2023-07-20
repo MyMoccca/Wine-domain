@@ -3,6 +3,9 @@
 $background-black: #0e1217;
 $background-grey: #939393;
 $red: #f64c4f;
+$beige-clair: #f1e8e4;
+$beige-middle: #958a85;
+$beige-dark: #544b48;
 
 /*FONTS*/
 $title-font-family: "Philosopher", sans-serif;
@@ -15,8 +18,7 @@ $title-font-family: "Philosopher", sans-serif;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  max-width: 400px;
-  width: 400px;
+
   margin-left: auto;
   margin-right: auto;
   padding-top: 5px;
@@ -27,7 +29,7 @@ $title-font-family: "Philosopher", sans-serif;
 
 @mixin basic-input($input-color) {
   border: none;
-  background: #fbfbfb;
+  background: $beige-clair;
   color: $background-black;
   margin-top: 0px;
   width: 400px;
@@ -71,4 +73,5 @@ $title-font-family: "Philosopher", sans-serif;
   margin-right: auto;
   padding-top: 5px;
   padding-bottom: 5px;
+  margin-top: 2rem;
 }

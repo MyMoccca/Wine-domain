@@ -103,16 +103,19 @@ function ProductsDashboard() {
   }, []);
 
   return (
-    <div className="container">
-      <div className="row">
-        <label htmlFor="product" className="mx-2 px-4">
+    <div className="admin-container">
+      <div>
+        <label htmlFor="product" className="form-label-item">
           Modifier un produit
           <select
+            className="basic-input-item select-item"
             name="product"
             id="product"
             onChange={(e) => getProductsToUpdate(e)}
           >
-            <option value="none">Ajouter vin</option>
+            <option value="none" className="basic-input-item">
+              Ajouter vin
+            </option>
             {productsToUpdate.map((prod) => (
               <option key={prod.id} value={prod.id}>
                 {prod.winename}
@@ -121,158 +124,160 @@ function ProductsDashboard() {
           </select>
         </label>
       </div>
-      <form onSubmit={manageProduct} className="row mx-auto">
-        <div className="form-group">
-          <label>
-            Nom de vin
-            <input
-              className="form-control"
-              type="text"
-              required
-              minLength={1}
-              maxLength={255}
-              value={product.winename}
-              name="winename"
-              onChange={(event) =>
-                handleProduct(event.target.name, event.target.value)
-              }
-            />
-          </label>
-        </div>
-        <div className="form-group">
-          <label>
-            Annee
-            <input
-              className="form-control"
-              type="text"
-              required
-              minLength={1}
-              maxLength={255}
-              value={product.year}
-              name="year"
-              onChange={(event) =>
-                handleProduct(event.target.name, event.target.value)
-              }
-            />
-          </label>
-        </div>
-        <div className="form-group">
-          <label>
-            Type de vin
-            <textarea
-              className="form-control"
-              required
-              minLength={1}
-              value={product.type}
-              name="type"
-              onChange={(event) =>
-                handleProduct(event.target.name, event.target.value)
-              }
-            />
-          </label>
-        </div>
-        <div className="form-group">
-          <label>
-            Variete
-            <textarea
-              className="form-control"
-              required
-              minLength={1}
-              value={product.variety}
-              name="variety"
-              onChange={(event) =>
-                handleProduct(event.target.name, event.target.value)
-              }
-            />
-          </label>
-        </div>
-        <div className="form-group">
-          <label>
-            Lien de l'image
-            <input
-              type="url"
-              className="form-control"
-              required
-              maxLength={255}
-              value={product.src}
-              name="src"
-              onChange={(event) =>
-                handleProduct(event.target.name, event.target.value)
-              }
-            />
-          </label>
-        </div>
-        <div className="form-group">
-          <label>
-            Texte alternatif
-            <input
-              type="text"
-              className="form-control"
-              required
-              maxLength={255}
-              minLength={1}
-              value={product.alt}
-              name="alt"
-              onChange={(event) =>
-                handleProduct(event.target.name, event.target.value)
-              }
-            />
-          </label>
-        </div>
-        {!product.id && (
-          <div className="row">
-            <button type="submit" className="btn btn-secondary col-5 m-2">
-              Valider
-            </button>
-            <button
-              type="button"
-              className="btn btn-secondary col-5 m-2"
-              onClick={(e) => {
-                e.preventDefault();
-                setProduct(productModel);
-              }}
-            >
-              Annuler
-            </button>
+      <div className="main-form-container">
+        <form onSubmit={manageProduct} className="form-container-items">
+          <div className="form-group">
+            <label className="form-label-item">
+              Nom de vin
+              <input
+                className="basic-input-item"
+                type="text"
+                required
+                minLength={1}
+                maxLength={255}
+                value={product.winename}
+                name="winename"
+                onChange={(event) =>
+                  handleProduct(event.target.name, event.target.value)
+                }
+              />
+            </label>
           </div>
-        )}
-        {product.id && (
-          <div className="row">
-            <button type="submit" className="btn btn-secondary col-3 m-2">
-              Modifier
-            </button>
-            <button
-              type="button"
-              onClick={(e) => deleteProduct(e)}
-              className="btn btn-secondary col-3 m-2"
-            >
-              Supprimer
-            </button>
-            <button
-              type="button"
-              className="btn btn-secondary col-3 m-2"
-              onClick={(e) => {
-                e.preventDefault();
-                setProduct(productModel);
-              }}
-            >
-              Annuler
-            </button>
+          <div className="form-group">
+            <label className="form-label-item">
+              Année
+              <input
+                className="basic-input-item"
+                type="text"
+                required
+                minLength={1}
+                maxLength={255}
+                value={product.year}
+                name="year"
+                onChange={(event) =>
+                  handleProduct(event.target.name, event.target.value)
+                }
+              />
+            </label>
           </div>
-        )}
-      </form>
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+          <div className="form-group">
+            <label className="form-label-item">
+              Type de vin
+              <textarea
+                className="basic-input-item"
+                required
+                minLength={1}
+                value={product.type}
+                name="type"
+                onChange={(event) =>
+                  handleProduct(event.target.name, event.target.value)
+                }
+              />
+            </label>
+          </div>
+          <div className="form-group">
+            <label className="form-label-item">
+              Variete
+              <textarea
+                className="basic-input-item"
+                required
+                minLength={1}
+                value={product.variety}
+                name="variety"
+                onChange={(event) =>
+                  handleProduct(event.target.name, event.target.value)
+                }
+              />
+            </label>
+          </div>
+          <div className="form-group">
+            <label className="form-label-item">
+              Lien de l'image
+              <input
+                type="url"
+                className="basic-input-item"
+                required
+                maxLength={255}
+                value={product.src}
+                name="src"
+                onChange={(event) =>
+                  handleProduct(event.target.name, event.target.value)
+                }
+              />
+            </label>
+          </div>
+          <div className="form-group">
+            <label className="form-label-item">
+              Texte alternatif
+              <input
+                type="text"
+                className="basic-input-item"
+                required
+                maxLength={255}
+                minLength={1}
+                value={product.alt}
+                name="alt"
+                onChange={(event) =>
+                  handleProduct(event.target.name, event.target.value)
+                }
+              />
+            </label>
+          </div>
+          {!product.id && (
+            <div className="row">
+              <button type="submit" className="admin-btn">
+                Valider
+              </button>
+              <button
+                type="button"
+                className="admin-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setProduct(productModel);
+                }}
+              >
+                Annuler
+              </button>
+            </div>
+          )}
+          {product.id && (
+            <div className="row">
+              <button type="submit" className="admin-btn">
+                Modifier
+              </button>
+              <button
+                type="button"
+                onClick={(e) => deleteProduct(e)}
+                className="btn btn-secondary col-3 m-2"
+              >
+                Supprimer
+              </button>
+              <button
+                type="button"
+                className="admin-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setProduct(productModel);
+                }}
+              >
+                Annuler
+              </button>
+            </div>
+          )}
+        </form>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+      </div>
     </div>
   );
 }
