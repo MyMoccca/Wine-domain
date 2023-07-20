@@ -10,6 +10,8 @@ import {
   PiWineThin,
 } from "react-icons/pi";
 
+import logoRed from "../assets/logo-DE-red.png";
+
 function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
 
@@ -17,7 +19,9 @@ function Navbar() {
     <div className="nav">
       <div className="nav-container">
         <div className="navbar">
-          <div className="logo">Esclarmonde</div>
+          <div className="logo">
+            <img src={logoRed} width="150px" alt="logo" />
+          </div>
           <div className="menu-toggle" onClick={() => setNavOpen(!navOpen)}>
             <div className={navOpen ? "hamBox hamBoxOpen" : "hamBox"}>
               <span className={navOpen ? "lineTop spin" : "lineTop"} />

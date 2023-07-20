@@ -30,13 +30,16 @@ function Products() {
           content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut repellendus deleniti nam corrupti eius ipsam accusantium pariatur nesciunt eos, perspiciatis saepe eveniet. Ut aperiam, velit sit alias eaque dignissimos quis."
         />
       </Helmet>
-      <section className="container">
-        <div className="products-container">
-          {products.map((product) => (
-            <ProductCard product={product} key={product.id} />
-          ))}
-        </div>
-      </section>
+      <div className="main-products-wrapper">
+        <h1 className="products-title">Vins domaine Esclarmonde</h1>
+        <section className="user-products-wrapper">
+          <div className="user-products-container">
+            {products.map((product) => (
+              <ProductCard product={product} key={product.id} />
+            ))}
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

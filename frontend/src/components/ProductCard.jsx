@@ -5,15 +5,15 @@ import productType from "../types/ProductType";
 
 function ProductCard({ product }) {
   return (
-    <article className="col-md-4 col-sm-12 d-flex">
-      <div className="border m-2 p-2 h-100 rounded-1 shadow-sm flex-fill">
-        <div className="p-2">
+    <article className="user-product-container">
+      <div className="l">
+        <div className="">
           <img
             src={`${import.meta.env.VITE_BACKEND_URL}/assets/images/${
               product.src
             }`}
             alt={product.alt}
-            className="w-100 rounded-1"
+            className=""
           />
         </div>
         <h2 className="text-center">{product.winename}</h2>

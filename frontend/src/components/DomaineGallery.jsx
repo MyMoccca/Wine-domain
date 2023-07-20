@@ -1,33 +1,62 @@
 import React from "react";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import gallery1 from "../assets/photo1.jpg";
+import gallery2 from "../assets/photo2.jpg";
+import gallery3 from "../assets/photo3.jpg";
+import gallery4 from "../assets/photo4.jpg";
+import gallery5 from "../assets/photo5.jpg";
+import gallery6 from "../assets/photo7.jpg";
+import gallery7 from "../assets/photo8.jpg";
+import gallery8 from "../assets/photo10.jpg";
+import gallery9 from "../assets/photo11.jpg";
+import gallery10 from "../assets/photo12.jpg";
+import gallery11 from "../assets/photo13.jpg";
+import gallery12 from "../assets/photo15.jpg";
 
 function DomaineGallery() {
-  const images = [
-    "https://picsum.photos/200/300?image=1050",
-
-    "https://picsum.photos/300/300?image=206",
-    "https://www.foodandwine.com/thmb/srEHECIjjqIsJfKkhy-oiwcoZ4I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Wine-Guide-Beaujolais-FT-BLOG0722-2000-7f1cac81f5044d3cbfeac708b66c4bea.jpg",
-    "https://picsum.photos/200/300?image=1050",
-
-    "https://www.walshandsons.com.au/wp-content/uploads/2022/05/Syrah-Hero_1.jpg",
-    "https://www.foodandwine.com/thmb/srEHECIjjqIsJfKkhy-oiwcoZ4I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Wine-Guide-Beaujolais-FT-BLOG0722-2000-7f1cac81f5044d3cbfeac708b66c4bea.jpg",
-    "https://picsum.photos/300/300?image=206",
-    "https://www.foodandwine.com/thmb/srEHECIjjqIsJfKkhy-oiwcoZ4I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Wine-Guide-Beaujolais-FT-BLOG0722-2000-7f1cac81f5044d3cbfeac708b66c4bea.jpg",
-    "https://www.walshandsons.com.au/wp-content/uploads/2022/05/Syrah-Hero_1.jpg",
-  ];
   return (
     <div>
-      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 250: 2, 450: 3 }}>
-        <Masonry>
-          {images.map((image) => (
-            <img
-              alt="gallery"
-              src={image}
-              style={{ width: "100%", display: "block" }}
-            />
-          ))}
-        </Masonry>
-      </ResponsiveMasonry>
+      <div className="wrapper">
+        <div className="gallery">
+          <ul>
+            <li>
+              <img src={gallery1} alt="vendages1" />
+            </li>
+            <li>
+              <img src={gallery2} alt="vendages1" />
+            </li>
+            <li>
+              <img src={gallery3} alt="vendages1" />
+            </li>
+            <li>
+              <img src={gallery4} alt="vendages1" />
+            </li>
+            <li>
+              <img src={gallery5} alt="vendages1" />
+            </li>
+            <li>
+              <img src={gallery6} alt="vendages1" />
+            </li>
+            <li>
+              <img src={gallery7} alt="vendages1" />
+            </li>
+            <li>
+              <img src={gallery8} alt="vendages1" />
+            </li>
+            <li>
+              <img src={gallery9} alt="vendages1" />
+            </li>
+            <li>
+              <img src={gallery10} alt="vendages1" />
+            </li>
+            <li>
+              <img src={gallery11} alt="vendages1" />
+            </li>
+            <li>
+              <img src={gallery12} alt="vendages1" />
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
