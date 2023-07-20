@@ -42,8 +42,6 @@ const edit = async (req, res) => {
     if (error) throw new Error(error);
     await models.images.update(article.src, article.alt, article.id);
     await models.articles.update(article);
-    await models.articleToTags.delete(article.id);
-    await models.articleToTags.insert(article.id, article.tags);
     res.sendStatus(204);
   } catch (error) {
     console.error(error);
@@ -66,16 +64,10 @@ const add = async (req, res) => {
         article,
         image[0].insertId
       );
-      if (articleCreated[0].affectedRows === 1) {
-        await models.articleToTags.insert(
-          articleCreated[0].insertId,
-          article.tags
-        );
-        res
-          .location(`/articles/${articleCreated[0].insertId}`)
-          .status(201)
-          .json({ ...article, id: articleCreated[0].insertId });
-      }
+      res
+        .location(`/articles/${articleCreated[0].insertId}`)
+        .status(201)
+        .json({ ...article, id: articleCreated[0].insertId });
     }
   } catch (error) {
     console.error(error);
@@ -84,15 +76,10 @@ const add = async (req, res) => {
 };
 
 const destroy = async (req, res) => {
-  const articleToTags = await models.articleToTags.delete(req.params.id);
+  const articleToDelete = await models.articles.delete(req.params.id);
   try {
-    if (articleToTags[0].affectedRows > 0) {
-      const articleToDelete = await models.articles.delete(req.params.id);
-      if (articleToDelete[0].affectedRows === 1) {
-        res.sendStatus(204);
-      } else {
-        res.sendStatus(404);
-      }
+    if (articleToDelete[0].affectedRows === 1) {
+      res.sendStatus(204);
     } else {
       res.sendStatus(404);
     }

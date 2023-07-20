@@ -89,7 +89,6 @@ CREATE TABLE
         subtitle VARCHAR(255) NOT NULL,
         resume LONGTEXT NOT NULL,
         text LONGTEXT NOT NULL,
-        author VARCHAR(255) NOT NULL,
         image_id INT NOT NULL,
         CONSTRAINT image_id_FK FOREIGN KEY (image_id) REFERENCES images(id) ON DELETE CASCADE
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
@@ -101,7 +100,6 @@ INSERT INTO
         subtitle,
         resume,
         text,
-        author,
         image_id
     )
 VALUES (
@@ -110,7 +108,6 @@ VALUES (
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum.',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet recusandae corrupti enim at neque sed, corporis eos vel dolores libero! Molestiae minus pariatur sunt sapiente magni asperiores quod, culpa magnam. Ea in deleniti iure quae quos neque. Officia harum quae esse asperiores, reiciendis assumenda optio doloremque non quod voluptatem hic! Corrupti, molestiae placeat neque nisi enim commodi pariatur modi ea. Temporibus, magnam iure dolore inventore vel consectetur, debitis perspiciatis optio nostrum maiores voluptatum ullam ipsum expedita qui ducimus commodi fuga incidunt. Nobis hic eaque odit nemo aliquam, cumque ea dolore. Fuga in corrupti natus, error dolorem autem dicta, omnis, aspernatur hic itaque expedita soluta voluptatum iure id ipsum vero rem quidem vel sapiente aperiam corporis. Magni officia porro incidunt debitis! Qui optio aliquid voluptates dolor doloribus, repellendus amet hic doloremque, perferendis, quo velit! Asperiores quo vitae repudiandae ipsum animi perspiciatis, nesciunt tempora non laborum veniam corrupti quod deleniti. Ea, beatae.',
-        'Thomas Riviera',
         1
     );
 
@@ -121,7 +118,6 @@ INSERT INTO
         subtitle,
         resume,
         text,
-        author,
         image_id
     )
 VALUES (
@@ -130,7 +126,6 @@ VALUES (
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum.',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet recusandae corrupti enim at neque sed, corporis eos vel dolores libero! Molestiae minus pariatur sunt sapiente magni asperiores quod, culpa magnam. Ea in deleniti iure quae quos neque. Officia harum quae esse asperiores, reiciendis assumenda optio doloremque non quod voluptatem hic! Corrupti, molestiae placeat neque nisi enim commodi pariatur modi ea. Temporibus, magnam iure dolore inventore vel consectetur, debitis perspiciatis optio nostrum maiores voluptatum ullam ipsum expedita qui ducimus commodi fuga incidunt. Nobis hic eaque odit nemo aliquam, cumque ea dolore. Fuga in corrupti natus, error dolorem autem dicta, omnis, aspernatur hic itaque expedita soluta voluptatum iure id ipsum vero rem quidem vel sapiente aperiam corporis. Magni officia porro incidunt debitis! Qui optio aliquid voluptates dolor doloribus, repellendus amet hic doloremque, perferendis, quo velit! Asperiores quo vitae repudiandae ipsum animi perspiciatis, nesciunt tempora non laborum veniam corrupti quod deleniti. Ea, beatae.',
-        'Thomas Riviera',
         2
     );
 
@@ -141,7 +136,6 @@ INSERT INTO
         subtitle,
         resume,
         text,
-        author,
         image_id
     )
 VALUES (
@@ -150,7 +144,6 @@ VALUES (
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum.',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet recusandae corrupti enim at neque sed, corporis eos vel dolores libero! Molestiae minus pariatur sunt sapiente magni asperiores quod, culpa magnam. Ea in deleniti iure quae quos neque. Officia harum quae esse asperiores, reiciendis assumenda optio doloremque non quod voluptatem hic! Corrupti, molestiae placeat neque nisi enim commodi pariatur modi ea. Temporibus, magnam iure dolore inventore vel consectetur, debitis perspiciatis optio nostrum maiores voluptatum ullam ipsum expedita qui ducimus commodi fuga incidunt. Nobis hic eaque odit nemo aliquam, cumque ea dolore. Fuga in corrupti natus, error dolorem autem dicta, omnis, aspernatur hic itaque expedita soluta voluptatum iure id ipsum vero rem quidem vel sapiente aperiam corporis. Magni officia porro incidunt debitis! Qui optio aliquid voluptates dolor doloribus, repellendus amet hic doloremque, perferendis, quo velit! Asperiores quo vitae repudiandae ipsum animi perspiciatis, nesciunt tempora non laborum veniam corrupti quod deleniti. Ea, beatae.',
-        'Thomas Riviera',
         3
     );
 
@@ -161,7 +154,6 @@ INSERT INTO
         subtitle,
         resume,
         text,
-        author,
         image_id
     )
 VALUES (
@@ -170,7 +162,6 @@ VALUES (
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum.',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet recusandae corrupti enim at neque sed, corporis eos vel dolores libero! Molestiae minus pariatur sunt sapiente magni asperiores quod, culpa magnam. Ea in deleniti iure quae quos neque. Officia harum quae esse asperiores, reiciendis assumenda optio doloremque non quod voluptatem hic! Corrupti, molestiae placeat neque nisi enim commodi pariatur modi ea. Temporibus, magnam iure dolore inventore vel consectetur, debitis perspiciatis optio nostrum maiores voluptatum ullam ipsum expedita qui ducimus commodi fuga incidunt. Nobis hic eaque odit nemo aliquam, cumque ea dolore. Fuga in corrupti natus, error dolorem autem dicta, omnis, aspernatur hic itaque expedita soluta voluptatum iure id ipsum vero rem quidem vel sapiente aperiam corporis. Magni officia porro incidunt debitis! Qui optio aliquid voluptates dolor doloribus, repellendus amet hic doloremque, perferendis, quo velit! Asperiores quo vitae repudiandae ipsum animi perspiciatis, nesciunt tempora non laborum veniam corrupti quod deleniti. Ea, beatae.',
-        'Thomas Riviera',
         4
     );
 
@@ -181,7 +172,6 @@ INSERT INTO
         subtitle,
         resume,
         text,
-        author,
         image_id
     )
 VALUES (
@@ -190,7 +180,6 @@ VALUES (
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum.',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet recusandae corrupti enim at neque sed, corporis eos vel dolores libero! Molestiae minus pariatur sunt sapiente magni asperiores quod, culpa magnam. Ea in deleniti iure quae quos neque. Officia harum quae esse asperiores, reiciendis assumenda optio doloremque non quod voluptatem hic! Corrupti, molestiae placeat neque nisi enim commodi pariatur modi ea. Temporibus, magnam iure dolore inventore vel consectetur, debitis perspiciatis optio nostrum maiores voluptatum ullam ipsum expedita qui ducimus commodi fuga incidunt. Nobis hic eaque odit nemo aliquam, cumque ea dolore. Fuga in corrupti natus, error dolorem autem dicta, omnis, aspernatur hic itaque expedita soluta voluptatum iure id ipsum vero rem quidem vel sapiente aperiam corporis. Magni officia porro incidunt debitis! Qui optio aliquid voluptates dolor doloribus, repellendus amet hic doloremque, perferendis, quo velit! Asperiores quo vitae repudiandae ipsum animi perspiciatis, nesciunt tempora non laborum veniam corrupti quod deleniti. Ea, beatae.',
-        'Thomas Riviera',
         5
     );
 
@@ -200,7 +189,6 @@ INSERT INTO
         subtitle,
         resume,
         text,
-        author,
         image_id
     )
 VALUES (
@@ -208,7 +196,6 @@ VALUES (
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum.',
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia ilENGINE = InnoDB DEFAULT CHARSET = utf8;, magnam iure dolore inventore vel consectetur, debitis perspiciatis optio nostrum maiores voluptatum ullam ipsum expedita qui ducimus commodi fuga incidunt. Nobis hic eaque odit nemo aliquam, cumque ea dolore. Fuga in corrupti natus, error dolorem autem dicta, omnis, aspernatur hic itaque expedita soluta voluptatum iure id ipsum vero rem quidem vel sapiente aperiam corporis. Magni officia porro incidunt debitis! Qui optio aliquid voluptates dolor doloribus, repellendus amet hic doloremque, perferendis, quo velit! Asperiores quo vitae repudiandae ipsum animi perspiciatis, nesciunt tempora non laborum veniam corrupti quod deleniti. Ea, beatae.',
-        'Thomas Riviera',
         6
     );
 
@@ -235,42 +222,42 @@ CREATE TABLE
 INSERT INTO
     wineimages(src, alt)
 VALUES (
-        'public/assets/images/Impulsif-rose-2022.png',
+        'Impulsif-rose-2022.png',
         'Impulsif rosé 2022'
     );
 
 INSERT INTO
     wineimages(src, alt)
 VALUES (
-        'public/assets/images/Impulsif-rose-2022.png',
+        'Impulsif-rose-2022.png',
         'Impulsif rosé 2022'
     );
 
 INSERT INTO
     wineimages(src, alt)
 VALUES (
-        'public/assets/images/Impulsif-rose-2022.png',
+        'Impulsif-rose-2022.png',
         'Impulsif rosé 2022'
     );
 
 INSERT INTO
     wineimages(src, alt)
 VALUES (
-        'public/assets/images/Impulsif-rose-2022.png',
+        'puPartage-2022.png',
         'Impulsif rosé 2022'
     );
 
 INSERT INTO
     wineimages(src, alt)
 VALUES (
-        'public/assets/images/Impulsif-rose-2022.png',
+        'Couvee-2guys-2022.png',
         'Impulsif rosé 2022'
     );
 
 INSERT INTO
     wineimages(src, alt)
 VALUES (
-        'public/assets/images/Impulsif-rose-2022.png',
+        'Partage-2022.png',
         'Impulsif rosé 2022'
     );
 

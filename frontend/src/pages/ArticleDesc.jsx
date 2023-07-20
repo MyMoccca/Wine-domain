@@ -48,16 +48,6 @@ function ArticleDesc() {
             <div className="col-6">
               <p>{article.text}</p>
             </div>
-            <div className="row">
-              <h5 className="col-6 text-center text-secondary">
-                {article.author}
-              </h5>
-              <p className="col-6 text-center text-secondary">
-                {article.tags.map((tag) => (
-                  <span key={tag.id}>{tag.label} - </span>
-                ))}
-              </p>
-            </div>
           </div>
         </>
       )}

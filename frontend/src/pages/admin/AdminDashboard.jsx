@@ -11,11 +11,9 @@ const articleModel = {
   text: "",
   src: "",
   alt: "",
-  tags: [],
 };
 
 function Admindashboard() {
-  const [tags, setTags] = useState([]);
   const [article, setArticle] = useState(articleModel);
   const [articlesToUpdate, setArticlesToUpdate] = useState([]);
 
@@ -43,20 +41,8 @@ function Admindashboard() {
   };
 
   const handleArticle = (name, value) => {
-    if (name === "tags") {
-      if (article.tags.some((tag) => tag.id === value.id)) {
-        setArticle({
-          ...article,
-          tags: article.tags.filter((tag) => tag.id !== +value.id),
-        });
-      } else {
-        setArticle({ ...article, tags: [...article.tags, value] });
-      }
-    } else {
-      setArticle({ ...article, [name]: value });
-    }
+    setArticle({ ...article, [name]: value });
   };
-
   const postArticle = async () => {
     try {
       const articleData = await connexion.post("/articles", article);
@@ -110,20 +96,7 @@ function Admindashboard() {
       toast.error(`Une erreur est survenu`);
     }
   };
-
-  const getTags = async () => {
-    const tagsData = await connexion.get("/tags");
-    try {
-      if (tagsData) {
-        setTags(tagsData);
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   useEffect(() => {
-    getTags();
     getArticles();
   }, []);
 
@@ -131,13 +104,13 @@ function Admindashboard() {
     <div className="container">
       <div className="row">
         <label htmlFor="article" className="mx-2 px-4">
-          Modifie un article
+          Modifier un article
           <select
             name="article"
             id="article"
             onChange={(e) => getArticleToUpdate(e)}
           >
-            <option value="none">Rafraichir</option>
+            <option value="none">Nouveau article</option>
             {articlesToUpdate.map((art) => (
               <option key={art.id} value={art.id}>
                 {art.title}
@@ -243,22 +216,6 @@ function Admindashboard() {
               }
             />
           </label>
-        </div>
-        <div className="from-group">
-          {tags.map((tag) => (
-            <button
-              type="button"
-              key={tag.id}
-              className={
-                article.tags.some((t) => t.id === tag.id)
-                  ? "m-2 border p-2 rounded bg-secondary text-white"
-                  : "m-2 border p-2 rounded"
-              }
-              onClick={() => handleArticle("tags", tag)}
-            >
-              {tag.label}
-            </button>
-          ))}
         </div>
         {!article.id && (
           <div className="row">

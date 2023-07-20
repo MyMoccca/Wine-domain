@@ -14,10 +14,8 @@ class ArticleManager extends AbstractManager {
 
   find(id) {
     return this.database.query(
-      `select a.id, a.title, a.subtitle, a.resume, a.text, a.author, i.src, i.alt, JSON_ARRAYAGG(JSON_OBJECT('id', t.id, 'label', t.label)) as tags from ${this.table} as a
+      `select a.id, a.title, a.subtitle, a.resume, a.text, i.src, i.alt from ${this.table} as a
       inner join images as i on i.id = a.image_id
-      inner join article_to_tags as att on att.article_id = a.id
-      inner join tags as t on t.id = att.tags_id
       where a.id = ?`,
       [id]
     );
@@ -25,7 +23,7 @@ class ArticleManager extends AbstractManager {
 
   insert(article, imageId) {
     return this.database.query(
-      `insert into ${this.table} (title, subtitle, text, resume, author, image_id) values (?, ?, ?, ?, "Author from admin", ?)`,
+      `insert into ${this.table} (title, subtitle, text, resume, image_id) values (?, ?, ?, ?, ?)`,
       [article.title, article.subtitle, article.text, article.resume, imageId]
     );
   }
@@ -35,6 +33,10 @@ class ArticleManager extends AbstractManager {
       { title, subtitle, resume, text },
       id,
     ]);
+  }
+
+  delete(id) {
+    return this.database.query(`delete from ${this.table} where id = ?`, [id]);
   }
 }
 

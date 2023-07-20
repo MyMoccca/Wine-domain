@@ -34,6 +34,8 @@ function App() {
 
         <Route path="/admin/" element={<AdminLayout />}>
           <Route path="articles" element={<AdminDashboard />} />
+          <Route path="vins" element={<AdminDashboard />} />
+          <Route path="photos" element={<AdminDashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,5 +1,5 @@
 .sidebar {
-  background: #314384;
+  background: #958a85;
   color: #fff;
   height: 100vh;
   width: 200px;
@@ -32,20 +32,27 @@ a {
 }
 
 .link:hover {
-  background: #5170be;
-  color: #d6d7e2;
+  background: #f9ddd0;
+  color: #958a85;
   transition: all 0.5s;
 }
 
 .link:active {
-  background: #5170be;
+  background: #f9ba9d;
   color: #fff;
 }
 
 .link_text {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .icon {
   font-size: 1.4rem;
+}
+
+.db-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }

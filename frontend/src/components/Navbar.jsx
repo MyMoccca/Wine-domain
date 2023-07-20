@@ -2,6 +2,13 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  PiWineDuotone,
+  PiWineFill,
+  PiWineLight,
+  PiWine,
+  PiWineThin,
+} from "react-icons/pi";
 
 function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
@@ -37,7 +44,7 @@ function Navbar() {
                 transitionDelay: navOpen ? "0.6s" : "0s",
               }}
             >
-              Accueil
+              <PiWineDuotone /> Accueil
             </Link>
             <div className="nav-item-wrapper" />
           </li>
@@ -51,7 +58,7 @@ function Navbar() {
                 transitionDelay: navOpen ? "0.6s" : "0s",
               }}
             >
-              Notre domaine
+              <PiWineFill /> Notre domaine
             </Link>
             <div className="nav-item-wrapper" />
           </li>
@@ -65,7 +72,7 @@ function Navbar() {
                 transitionDelay: navOpen ? "0.7s" : "0s",
               }}
             >
-              Le terroir
+              <PiWineLight /> Le terroir
             </Link>
             <div className="nav-item-wrapper" />
           </li>
@@ -79,7 +86,7 @@ function Navbar() {
                 transitionDelay: navOpen ? "0.5s" : "0s",
               }}
             >
-              Nos vins
+              <PiWine /> Nos vins
             </Link>
             <div className="nav-item-wrapper" />
           </li>
@@ -107,7 +114,7 @@ function Navbar() {
                 transitionDelay: navOpen ? "0.8s" : "0s",
               }}
             >
-              Nous trouver
+              <PiWineThin /> Nous trouver
             </Link>
             <div className="nav-item-wrapper" />
           </li>

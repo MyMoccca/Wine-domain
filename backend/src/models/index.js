@@ -39,10 +39,20 @@ const ArticlesManager = require("./ArticlesManager");
 models.articles = new ArticlesManager();
 models.articles.setDatabase(pool);
 
+const ImagesManager = require("./ImagesManager");
+
+models.images = new ImagesManager();
+models.images.setDatabase(pool);
+
 const ProductsManager = require("./ProductsManager");
 
 models.products = new ProductsManager();
 models.products.setDatabase(pool);
+
+const WineimagesManager = require("./WineimagesManager");
+
+models.wineimages = new WineimagesManager();
+models.wineimages.setDatabase(pool);
 
 const UserManager = require("./UserManager");
 

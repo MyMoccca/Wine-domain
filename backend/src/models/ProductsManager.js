@@ -21,7 +21,7 @@ class ProductsManager extends AbstractManager {
     );
   }
 
-  insert(product, imageId) {
+  insert(product, wineimageId) {
     return this.database.query(
       `insert into ${this.table} (winename, type, variety, details, price, wineimage_id) values (?, ?, ?, ?, ?, ?)`,
       [
@@ -30,7 +30,7 @@ class ProductsManager extends AbstractManager {
         product.variety,
         product.details,
         product.price,
-        imageId,
+        wineimageId,
       ]
     );
   }

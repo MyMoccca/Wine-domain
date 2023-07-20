@@ -11,7 +11,6 @@ const articleType = {
     src: PropTypes.string,
     alt: PropTypes.string,
   }).isRequired,
-  tags: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default articleType;

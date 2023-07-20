@@ -1,13 +1,11 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import {
-  TfiAlignJustify,
-  TfiHome,
-  TfiVideoCamera,
-  TfiUser,
-  TfiCup,
-} from "react-icons/tfi";
+import { LiaWineBottleSolid } from "react-icons/lia";
+import { SlPicture } from "react-icons/sl";
+import { TfiHome, TfiAlignJustify } from "react-icons/tfi";
+
+import { BsFileEarmarkRichtext } from "react-icons/bs";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,18 +19,18 @@ function Sidebar() {
     {
       path: "/admin/articles",
       name: "Articles",
-      icon: <TfiVideoCamera />,
+      icon: <BsFileEarmarkRichtext />,
     },
 
     {
       path: "/admin/vins",
       name: "Liste des vins",
-      icon: <TfiCup />,
+      icon: <LiaWineBottleSolid />,
     },
     {
       path: "/admin/photos",
       name: "Gallery",
-      icon: <TfiCup />,
+      icon: <SlPicture />,
     },
   ];
   return (
@@ -42,9 +40,7 @@ function Sidebar() {
           <div
             style={{ display: isOpen ? "block" : "none" }}
             className="user-icon"
-          >
-            <TfiUser />
-          </div>
+          />
           <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
             <TfiAlignJustify onClick={toggle} />
           </div>
