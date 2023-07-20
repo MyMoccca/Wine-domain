@@ -1,0 +1,110 @@
+.admin-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.articles-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  padding: 2rem;
+}
+
+.admin-articles-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.products-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  align-items: center;
+  background-color: #d5ccc9;
+}
+
+.admin-articles-container {
+  max-width: 80%;
+}
+
+.admin-articles-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0px;
+  margin-top: 3rem;
+}
+
+.admin-product-picture {
+  width: 150px;
+}
+
+.admin-article-picture {
+  width: 150px;
+  clip-path: circle(40%);
+  border: solid 10px #a49893;
+}
+
+.item-blog-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #f1e8e4;
+  padding: 1rem;
+  width: 500px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  margin: 1rem;
+}
+
+.btn-add {
+  width: 250px;
+  background-color: #958a85;
+  color: white;
+  padding: 0.9rem;
+  text-align: center;
+  font-size: 1.4rem;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.admin-product-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f1e8e4;
+  padding: 1rem;
+  width: 500px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  margin: 1rem;
+  margin-bottom: 5rem;
+}
+
+.admin-product-container img {
+  width: 50px;
+}
+
+.produits-title {
+  margin-bottom: 50px;
+  margin-top: 0px;
+}
+
+.product-text {
+  width: 80%;
+  margin-left: 2rem;
+}
+
+.item-text-box {
+  width: 80%;
+  margin-left: 2rem;
+}

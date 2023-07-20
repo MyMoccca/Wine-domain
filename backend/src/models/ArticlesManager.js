@@ -7,7 +7,7 @@ class ArticleManager extends AbstractManager {
 
   findAll() {
     return this.database.query(`
-      select a.id, a.title, i.src, i.alt from  ${this.table} as a
+      select a.id, a.title, a.subtitle, i.src, i.alt from  ${this.table} as a
       inner join images as i on i.id = a.image_id
     `);
   }

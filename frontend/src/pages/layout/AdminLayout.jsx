@@ -15,7 +15,7 @@ function AdminLayout() {
       </header>
     );
   }
-  return <Navigate to="/admin/articles" replace />;
+  return <Navigate to="/admin" replace />;
 }
 
 export default AdminLayout;

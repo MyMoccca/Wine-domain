@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 const articlesControllers = require("./controllers/articlesControllers");
-const productControllers = require("./controllers/productControllers");
+const productsControllers = require("./controllers/productsControllers");
 const authControllers = require("./controllers/authControllers");
 
 const { checkUserData } = require("./services/auth");
@@ -15,11 +15,11 @@ router.put("/articles/:id", checkUser, articlesControllers.edit);
 router.post("/articles", articlesControllers.add);
 router.delete("/articles/:id", checkUser, articlesControllers.destroy);
 
-router.get("/vins", productControllers.browse);
-router.get("/vins/:id", productControllers.read);
-router.put("/vins/:id", checkUser, productControllers.edit);
-router.post("/vins", checkUser, productControllers.add);
-// router.delete("/vins/:id", checkUser, productControllers.destroy);
+router.get("/vins", productsControllers.browse);
+router.get("/vins/:id", productsControllers.read);
+router.put("/vins/:id", checkUser, productsControllers.edit);
+router.post("/vins", checkUser, productsControllers.add);
+router.delete("/vins/:id", checkUser, productsControllers.destroy);
 
 router.post("/login", checkUserData, authControllers.login);
 

@@ -1,10 +1,13 @@
 .sidebar {
-  background: #958a85;
+  background: #958a85c6;
   color: #fff;
-  height: 100vh;
+  height: 150vh;
   width: 200px;
   transition: all 0.5s;
   font-family: $title-font-family;
+  position: absolute;
+  top: 0;
+  z-index: 10;
 }
 
 .top_section {

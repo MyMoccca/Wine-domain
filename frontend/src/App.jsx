@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminLayout from "./pages/layout/AdminLayout";
 import Auth from "./pages/Auth";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import ArticlesDashboard from "./pages/admin/ArticlesDashboard";
+import ProductsDashboard from "./pages/admin/ProductsDashboard";
 import Articles from "./pages/Articles";
 import ArticleDesc from "./pages/ArticleDesc";
 import Products from "./pages/Products";
@@ -33,8 +35,9 @@ function App() {
         </Route>
 
         <Route path="/admin/" element={<AdminLayout />}>
-          <Route path="articles" element={<AdminDashboard />} />
-          <Route path="vins" element={<AdminDashboard />} />
+          <Route path="" element={<AdminDashboard />} />
+          <Route path="articles" element={<ArticlesDashboard />} />
+          <Route path="vins" element={<ProductsDashboard />} />
           <Route path="photos" element={<AdminDashboard />} />
         </Route>
       </Routes>

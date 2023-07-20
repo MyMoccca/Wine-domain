@@ -21,7 +21,7 @@ function Auth() {
       const log = await connexion.post("/login", userToLog);
       setUser(log.msg);
       setTimeout(() => {
-        navigate("/admin/articles");
+        navigate("/admin");
       }, 1000);
     } catch (error) {
       console.error(error);

@@ -3,53 +3,51 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import connexion from "../../services/connexion";
 
-const productModel = {
+const articleModel = {
   id: null,
-  winename: "",
-  year: "",
-  type: "",
-  variety: "",
-  price: "",
-  details: "",
+  title: "",
+  subtitle: "",
+  resume: "",
+  text: "",
   src: "",
   alt: "",
 };
 
-function ProductsDashboard() {
-  const [product, setProduct] = useState(productModel);
-  const [productsToUpdate, setProductsToUpdate] = useState([]);
+function Admindashboard() {
+  const [article, setArticle] = useState(articleModel);
+  const [articlesToUpdate, setArticlesToUpdate] = useState([]);
 
-  const getProductsToUpdate = async (event) => {
+  const getArticleToUpdate = async (event) => {
     event.preventDefault();
-    const productData = await connexion.get(`/vins/${event.target.value}`);
+    const articleData = await connexion.get(`/articles/${event.target.value}`);
     try {
-      if (productData) {
-        setProduct(productData);
+      if (articleData) {
+        setArticle(articleData);
       }
     } catch (error) {
       console.error(error);
     }
   };
 
-  const getProduct = async () => {
-    const productData = await connexion.get("/vins");
+  const getArticles = async () => {
+    const articlesData = await connexion.get("/articles");
     try {
-      if (productData) {
-        setProductsToUpdate(productData);
+      if (articlesData) {
+        setArticlesToUpdate(articlesData);
       }
     } catch (error) {
       console.error(error);
     }
   };
 
-  const handleProduct = (name, value) => {
-    setProduct({ ...product, [name]: value });
+  const handleArticle = (name, value) => {
+    setArticle({ ...article, [name]: value });
   };
-  const postProduct = async () => {
+  const postArticle = async () => {
     try {
-      const productData = await connexion.post("/vins", product);
-      setProduct(productData);
-      getProduct();
+      const articleData = await connexion.post("/articles", article);
+      setArticle(articleData);
+      getArticles();
       toast.success(`🦄 Article ajouté`);
     } catch (error) {
       console.error(error);
@@ -59,9 +57,9 @@ function ProductsDashboard() {
 
   const updateArticle = async () => {
     try {
-      const res = await connexion.put(`/vins/${product.id}`, product);
+      const res = await connexion.put(`/articles/${article.id}`, article);
       if (res.status === 201) {
-        toast.success(`🦄 Product mis à jour`);
+        toast.success(`🦄 Article mis à jour`);
       } else {
         throw new Error(res.statusText);
       }
@@ -71,25 +69,25 @@ function ProductsDashboard() {
     }
   };
 
-  const manageProduct = (event) => {
+  const manageArticle = (event) => {
     event.preventDefault();
-    if (product.id) {
+    if (article.id) {
       updateArticle();
     } else {
-      postProduct();
+      postArticle();
     }
   };
 
-  const deleteProduct = async (event) => {
+  const deleteArticle = async (event) => {
     event.preventDefault();
     try {
-      const res = await connexion.delete(`/vins/${product.id}`);
+      const res = await connexion.delete(`/articles/${article.id}`);
       if (res.status === 201) {
-        setProduct(productModel);
-        setProductsToUpdate(
-          productsToUpdate.filter((prod) => prod.id !== product.id)
+        setArticle(articleModel);
+        setArticlesToUpdate(
+          articlesToUpdate.filter((art) => art.id !== article.id)
         );
-        toast.success(`🦄 Product supprimé`);
+        toast.success(`🦄 Article supprimé`);
       } else {
         throw new Error(res.statusText);
       }
@@ -99,89 +97,89 @@ function ProductsDashboard() {
     }
   };
   useEffect(() => {
-    getProduct();
+    getArticles();
   }, []);
 
   return (
     <div className="container">
       <div className="row">
-        <label htmlFor="product" className="mx-2 px-4">
-          Modifier un produit
+        <label htmlFor="article" className="mx-2 px-4">
+          Modifier un article
           <select
-            name="product"
-            id="product"
-            onChange={(e) => getProductsToUpdate(e)}
+            name="article"
+            id="article"
+            onChange={(e) => getArticleToUpdate(e)}
           >
-            <option value="none">Ajouter vin</option>
-            {productsToUpdate.map((prod) => (
-              <option key={prod.id} value={prod.id}>
-                {prod.winename}
+            <option value="none">Nouveau article</option>
+            {articlesToUpdate.map((art) => (
+              <option key={art.id} value={art.id}>
+                {art.title}
               </option>
             ))}
           </select>
         </label>
       </div>
-      <form onSubmit={manageProduct} className="row mx-auto">
+      <form onSubmit={manageArticle} className="row mx-auto">
         <div className="form-group">
           <label>
-            Nom de vin
+            Titre
             <input
               className="form-control"
               type="text"
               required
               minLength={1}
               maxLength={255}
-              value={product.winename}
-              name="winename"
+              value={article.title}
+              name="title"
               onChange={(event) =>
-                handleProduct(event.target.name, event.target.value)
+                handleArticle(event.target.name, event.target.value)
               }
             />
           </label>
         </div>
         <div className="form-group">
           <label>
-            Annee
+            Sous titre
             <input
               className="form-control"
               type="text"
               required
               minLength={1}
               maxLength={255}
-              value={product.year}
-              name="year"
+              value={article.subtitle}
+              name="subtitle"
               onChange={(event) =>
-                handleProduct(event.target.name, event.target.value)
+                handleArticle(event.target.name, event.target.value)
               }
             />
           </label>
         </div>
         <div className="form-group">
           <label>
-            Type de vin
+            Résumé
             <textarea
               className="form-control"
               required
               minLength={1}
-              value={product.type}
-              name="type"
+              value={article.resume}
+              name="resume"
               onChange={(event) =>
-                handleProduct(event.target.name, event.target.value)
+                handleArticle(event.target.name, event.target.value)
               }
             />
           </label>
         </div>
         <div className="form-group">
           <label>
-            Variete
+            Texte
             <textarea
               className="form-control"
               required
               minLength={1}
-              value={product.variety}
-              name="variety"
+              value={article.text}
+              name="text"
               onChange={(event) =>
-                handleProduct(event.target.name, event.target.value)
+                handleArticle(event.target.name, event.target.value)
               }
             />
           </label>
@@ -194,10 +192,10 @@ function ProductsDashboard() {
               className="form-control"
               required
               maxLength={255}
-              value={product.src}
+              value={article.src}
               name="src"
               onChange={(event) =>
-                handleProduct(event.target.name, event.target.value)
+                handleArticle(event.target.name, event.target.value)
               }
             />
           </label>
@@ -211,15 +209,15 @@ function ProductsDashboard() {
               required
               maxLength={255}
               minLength={1}
-              value={product.alt}
+              value={article.alt}
               name="alt"
               onChange={(event) =>
-                handleProduct(event.target.name, event.target.value)
+                handleArticle(event.target.name, event.target.value)
               }
             />
           </label>
         </div>
-        {!product.id && (
+        {!article.id && (
           <div className="row">
             <button type="submit" className="btn btn-secondary col-5 m-2">
               Valider
@@ -229,21 +227,21 @@ function ProductsDashboard() {
               className="btn btn-secondary col-5 m-2"
               onClick={(e) => {
                 e.preventDefault();
-                setProduct(productModel);
+                setArticle(articleModel);
               }}
             >
               Annuler
             </button>
           </div>
         )}
-        {product.id && (
+        {article.id && (
           <div className="row">
             <button type="submit" className="btn btn-secondary col-3 m-2">
               Modifier
             </button>
             <button
               type="button"
-              onClick={(e) => deleteProduct(e)}
+              onClick={(e) => deleteArticle(e)}
               className="btn btn-secondary col-3 m-2"
             >
               Supprimer
@@ -253,7 +251,7 @@ function ProductsDashboard() {
               className="btn btn-secondary col-3 m-2"
               onClick={(e) => {
                 e.preventDefault();
-                setProduct(productModel);
+                setArticle(articleModel);
               }}
             >
               Annuler
@@ -277,7 +275,7 @@ function ProductsDashboard() {
   );
 }
 
-export default ProductsDashboard;
+export default Admindashboard;
 
 /**
  * title

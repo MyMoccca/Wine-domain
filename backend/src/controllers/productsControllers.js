@@ -75,29 +75,24 @@ const add = async (req, res) => {
   }
 };
 
-// const destroy = async (req, res) => {
-//   const articleToTags = await models.articleToTags.delete(req.params.id);
-//   try {
-//     if (articleToTags[0].affectedRows > 0) {
-//       const articleToDelete = await models.articles.delete(req.params.id);
-//       if (articleToDelete[0].affectedRows === 1) {
-//         res.sendStatus(204);
-//       } else {
-//         res.sendStatus(404);
-//       }
-//     } else {
-//       res.sendStatus(404);
-//     }
-//   } catch (error) {
-//     console.error(error);
-//     res.sendStatus(500);
-//   }
-// };
+const destroy = async (req, res) => {
+  try {
+    const articleToDelete = await models.articles.delete(req.params.id);
+    if (articleToDelete[0].affectedRows === 1) {
+      res.sendStatus(204);
+    } else {
+      res.sendStatus(404);
+    }
+  } catch (error) {
+    console.error(error);
+    res.sendStatus(500);
+  }
+};
 
 module.exports = {
   browse,
   read,
   edit,
   add,
-  // destroy,
+  destroy,
 };

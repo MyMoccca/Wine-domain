@@ -24,7 +24,7 @@ function Products() {
   return (
     <div>
       <Helmet>
-        <title>Mon blog de vin</title>
+        <title>Vins domaine Esclarmonde</title>
         <meta
           name="description"
           content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut repellendus deleniti nam corrupti eius ipsam accusantium pariatur nesciunt eos, perspiciatis saepe eveniet. Ut aperiam, velit sit alias eaque dignissimos quis."
