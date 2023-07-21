@@ -1,0 +1,20 @@
+footer {
+  width: 100%;
+  background-color: $background-black;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  bottom: 0;
+}
+
+.footer-contact {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.footer-contact a:hover {
+  font-size: 2rem;
+}

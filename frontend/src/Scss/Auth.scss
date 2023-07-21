@@ -1,0 +1,97 @@
+.form-container {
+  @include form-container;
+  margin-top: 10%;
+  background-color: $beige-middle;
+  max-width: 600px;
+  height: 400px;
+  color: $beige-clair;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  margin-bottom: 15rem;
+}
+
+.form-label {
+  @include form-container-label;
+}
+
+.basic-input {
+  @include basic-input($beige-dark);
+  background-color: #f1e8e4;
+}
+
+.basic-input:hover {
+  @include basic-input-hover($background-black);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.btn {
+  display: inline-block;
+  color: #ffffff;
+  padding: 32px;
+  position: relative;
+  letter-spacing: 1px;
+  background-color: none;
+
+  &__circle,
+  &__text,
+  &__white-circle {
+    position: absolute;
+  }
+
+  &__circle {
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 100%;
+    width: 100%;
+    box-shadow: 0 0 1px 1px #fff;
+    transition: 0.3s linear;
+  }
+
+  &__white-circle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    background: #ffffff;
+    display: flex;
+    transition: 0.3s ease-in-out;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      margin: auto;
+    }
+  }
+
+  &__text {
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    z-index: 2;
+    padding: 24px 8px;
+    transition: 0.3s linear;
+    font-size: 1.4rem;
+  }
+
+  &:hover {
+    .btn__circle {
+      transform: scale(0);
+    }
+
+    .btn__white-circle {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .btn__text {
+      transform: translate(40px, -50%);
+    }
+  }
+}

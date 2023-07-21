@@ -1,5 +1,16 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  PiWineDuotone,
+  PiWineFill,
+  PiWineLight,
+  PiWine,
+  PiWineThin,
+} from "react-icons/pi";
+
+import logoRed from "../assets/logo-DE-red.png";
 
 function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
@@ -8,7 +19,9 @@ function Navbar() {
     <div className="nav">
       <div className="nav-container">
         <div className="navbar">
-          <div className="logo">Esclarmonde</div>
+          <div className="logo">
+            <img src={logoRed} width="150px" alt="logo" />
+          </div>
           <div className="menu-toggle" onClick={() => setNavOpen(!navOpen)}>
             <div className={navOpen ? "hamBox hamBoxOpen" : "hamBox"}>
               <span className={navOpen ? "lineTop spin" : "lineTop"} />
@@ -32,16 +45,16 @@ function Navbar() {
               onClick={() => setNavOpen(!navOpen)}
               style={{
                 top: navOpen ? "0" : "70px",
-                transitionDelay: navOpen ? "0.5s" : "0s",
+                transitionDelay: navOpen ? "0.6s" : "0s",
               }}
             >
-              Home
+              <PiWineDuotone /> Accueil
             </Link>
             <div className="nav-item-wrapper" />
           </li>
           <li className="nav-item">
             <Link
-              to="/about"
+              to="/domaine"
               className="nav-link"
               onClick={() => setNavOpen(!navOpen)}
               style={{
@@ -49,13 +62,27 @@ function Navbar() {
                 transitionDelay: navOpen ? "0.6s" : "0s",
               }}
             >
-              about
+              <PiWineFill /> Notre domaine
             </Link>
             <div className="nav-item-wrapper" />
           </li>
           <li className="nav-item">
             <Link
-              to="/history"
+              to="/vins"
+              className="nav-link"
+              onClick={() => setNavOpen(!navOpen)}
+              style={{
+                top: navOpen ? "0" : "70px",
+                transitionDelay: navOpen ? "0.5s" : "0s",
+              }}
+            >
+              <PiWine /> Nos vins
+            </Link>
+            <div className="nav-item-wrapper" />
+          </li>
+          <li className="nav-item">
+            <Link
+              to="/articles"
               className="nav-link"
               onClick={() => setNavOpen(!navOpen)}
               style={{
@@ -63,7 +90,7 @@ function Navbar() {
                 transitionDelay: navOpen ? "0.7s" : "0s",
               }}
             >
-              history
+              <PiWineLight /> Blog
             </Link>
             <div className="nav-item-wrapper" />
           </li>
@@ -77,19 +104,11 @@ function Navbar() {
                 transitionDelay: navOpen ? "0.8s" : "0s",
               }}
             >
-              contact
+              <PiWineThin /> Nous trouver
             </Link>
             <div className="nav-item-wrapper" />
           </li>
         </ul>
-        <div className="nav-footer">
-          <div className="location">
-            <span>Suivez nous</span>
-          </div>
-          <div className="nav-social-media">
-            <ul></ul>
-          </div>
-        </div>
       </div>
     </div>
   );

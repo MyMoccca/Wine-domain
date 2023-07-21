@@ -1,17 +1,11 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import {
-  TfiAlignJustify,
-  TfiHome,
-  TfiVideoCamera,
-  TfiGame,
-  TfiUser,
-  TfiCup,
-  TfiGallery,
-  TfiLayersAlt,
-  TfiIdBadge,
-} from "react-icons/tfi";
+import { LiaWineBottleSolid } from "react-icons/lia";
+import { SlPicture } from "react-icons/sl";
+import { TfiHome, TfiAlignJustify } from "react-icons/tfi";
+
+import { BsFileEarmarkRichtext } from "react-icons/bs";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,61 +17,20 @@ function Sidebar() {
       icon: <TfiHome />,
     },
     {
-      path: "/admin/videos",
-      name: "Videos",
-      icon: <TfiVideoCamera />,
-    },
-    {
-      path: "/admin/videos",
-      name: "Liste des videos",
-    },
-    {
-      path: "/admin/videos/add",
-      name: "Ajouter une video",
-    },
-    {
-      path: "/admin/games",
-      name: "Jeux",
-      icon: <TfiGame />,
-    },
-    {
-      path: "/admin/games",
-      name: "Liste des jeux",
+      path: "/admin/articles",
+      name: "Articles",
+      icon: <BsFileEarmarkRichtext />,
     },
 
     {
-      path: "/admin/games/add",
-      name: "Ajouter une jeux",
+      path: "/admin/vins",
+      name: "Liste des vins",
+      icon: <LiaWineBottleSolid />,
     },
     {
-      path: "/admin/teams",
-      name: "Equipes",
-      icon: <TfiCup />,
-    },
-    {
-      path: "/admin/games",
-      name: "Liste des equipes",
-    },
-
-    {
-      path: "/admin/teams/add",
-      name: "Ajouter une equipe",
-    },
-    {
-      path: "/admin/sliders",
-      name: "Sliders",
-      icon: <TfiLayersAlt />,
-    },
-    {
-      path: "/admin/grilles",
-      name: "Grilles",
-      icon: <TfiGallery />,
-    },
-
-    {
-      path: "/admin/profils",
-      name: "Profils",
-      icon: <TfiIdBadge />,
+      path: "/admin/photos",
+      name: "Gallery",
+      icon: <SlPicture />,
     },
   ];
   return (
@@ -87,9 +40,7 @@ function Sidebar() {
           <div
             style={{ display: isOpen ? "block" : "none" }}
             className="user-icon"
-          >
-            <TfiUser />
-          </div>
+          />
           <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
             <TfiAlignJustify onClick={toggle} />
           </div>

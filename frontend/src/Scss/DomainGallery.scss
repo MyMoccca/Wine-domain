@@ -1,0 +1,102 @@
+.wrapper {
+  width: 50%;
+  margin: 40px auto;
+}
+
+div.gallery {
+  margin-top: 30px;
+}
+
+div.gallery ul {
+  list-style-type: none;
+  margin-left: 35px;
+}
+
+/* animation */
+div.gallery ul li,
+div.gallery li img {
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+div.gallery ul li {
+  position: relative;
+  float: left;
+  width: 160px;
+  height: 215px;
+  margin: 5px;
+  padding: 5px;
+  z-index: 0;
+}
+
+/* Make sure z-index is higher on hover */
+/* Ensure that hover image overlapped the others */
+div.gallery ul li:hover {
+  z-index: 5;
+}
+
+/* Image is position nicely under li */
+div.gallery ul li img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #dddddd;
+  padding: 5px;
+  width: 160px;
+  height: 215px;
+  background: #f0f0f0;
+  filter: saturate(10%);
+  transition: all 0.5s ease-out;
+}
+
+div.gallery ul li img:first-child {
+  background: $corail;
+}
+
+div.gallery ul li img:hover {
+  width: 260px;
+  height: 335px;
+  margin-top: -130px;
+  margin-left: -130px;
+  top: 65%;
+  left: 65%;
+  filter: saturate(90%);
+}
+
+.DomainePage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-title-domain {
+  text-align: center;
+  padding-bottom: 0.5rem;
+  font-size: 3rem;
+  margin-top: 5%;
+  border-bottom: 4px solid $red;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive hack */
+@media only screen and (min-width: 499px) and (max-width: 1212px) {
+  .wrapper {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 498px) {
+  .wrapper {
+    width: 300px;
+  }
+
+  div.gallery ul {
+    list-style-type: none;
+    margin: 0;
+  }
+}

@@ -1,8 +1,23 @@
 @import "./Variables.scss";
 @import "./Navbar.scss";
+@import "./Home.scss";
 @import "./Sidebar.scss";
 @import "./MainVideo.scss";
 @import "./VideoSlider.scss";
+@import "./WineCarousel.scss";
+@import "./Products.scss";
+@import "./Articles.scss";
+@import "./TextSection.scss";
+@import "./Auth.scss";
+@import "./FranceCard.scss";
+@import "./Domaine.scss";
+@import "./Domaine.scss";
+@import "./AdminDashboard.scss";
+@import "./ItemsDashboard.scss";
+@import "./DomainGallery.scss";
+@import "./ContactPage.scss";
+@import "./ImageCarousel.scss";
+@import "./Footer.scss";
 
 * {
   margin: 0;
@@ -12,13 +27,11 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: $title-font-family;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
-  color: beige;
+  background-color: #f9f9f9;
+  color: rgb(62, 62, 62);
 }
 
 code {

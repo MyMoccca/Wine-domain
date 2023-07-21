@@ -1,0 +1,62 @@
+.admin-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-form-container {
+  @include form-container;
+  background-color: $beige-middle;
+  max-width: 600px;
+  min-height: 650px;
+  color: $beige-clair;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-top: 5%;
+}
+
+.form-container-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label-item {
+  @include form-container-label;
+  margin-top: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.basic-input-item {
+  @include basic-input($beige-dark);
+  background-color: #f1e8e4;
+}
+
+.select-item {
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-left: auto;
+}
+
+.basic-input-item:hover {
+  @include basic-input-hover($background-black);
+}
+
+.admin-btn {
+  border: 2px solid #f1e8e4;
+  color: $beige-clair;
+  padding: 2%;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  font-weight: 400;
+  margin: 4%;
+}
+
+.admin-btn:hover {
+  background-color: $beige-clair;
+  color: $beige-dark;
+}

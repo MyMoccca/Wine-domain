@@ -1,0 +1,146 @@
+.contactTitle {
+  text-align: center;
+  padding-bottom: 0.5rem;
+  font-size: 3rem;
+  margin-top: 5%;
+  border-bottom: 4px solid $red;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.LabelForm {
+  color: #f9f9f9;
+  text-align: left;
+  display: block;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: $title-font-family;
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+.container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ContactForm {
+  max-width: 400px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /*   z-index: 1; 
+  animation: bounce 1.5s infinite;*/
+}
+
+::-webkit-input-placeholder {
+  font-size: 1.3em;
+}
+
+.animated {
+  background-color: #f9f9f9;
+  color: $background-black;
+  margin-top: 0px;
+}
+
+.animated:hover {
+  border-bottom: 5px solid $red;
+  height: 40px;
+  width: 340px;
+  transition: ease 0.5s;
+}
+
+.message {
+  background-color: #f9f9f9;
+  overflow: hidden;
+  height: 10rem;
+}
+
+.message:hover {
+  border-bottom: 5px solid $red;
+  height: 15em;
+  width: 340px;
+  transition: ease 0.5s;
+}
+
+.formEntry {
+  display: block;
+  margin: 1rem auto;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.5s ease 0s;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: $title-font-family;
+  color: $red;
+  font-size: 1rem;
+}
+
+button.submit {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  min-width: 200px;
+  height: 60px;
+  position: relative;
+}
+
+button.submit:hover {
+}
+
+.non-valid {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: stretch;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 0px;
+  margin-bottom: 0.9rem;
+  color: $red;
+  width: 60%;
+  padding: 0.3rem;
+  border-radius: 30px;
+  font-family: $title-font-family;
+  font-size: 1.17rem;
+  font-weight: 200;
+}
+
+.valid {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: stretch;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 0px;
+  margin-bottom: 0.9rem;
+  color: $red;
+  width: 60%;
+  padding: 0.3rem;
+  border-radius: 30px;
+  font-family: $title-font-family;
+  font-size: 1.17rem;
+  font-weight: 200;
+}
+
+button.send {
+  font-family: $title-font-family !important;
+  margin-left: 30%;
+}
+
+@media only screen and (max-width: 768px) {
+  .contactTitle {
+    margin-top: 40%;
+  }
+}
