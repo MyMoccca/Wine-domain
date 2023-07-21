@@ -1,5 +1,5 @@
 import React from "react";
-import videoBg3 from "../assets/wine.mp4";
+import videoBg2 from "../assets/wine-verre.mp4";
 import barique from "../assets/barique.png";
 import grapes from "../assets/grapes.png";
 import logo from "../assets/logo-DE.png";
@@ -9,7 +9,7 @@ function MainVideo() {
     <div className="main-video">
       <div className="video-overlay" />
       <video autoPlay loop className="bgVideo">
-        <source src={videoBg3} type="video/mp4" />
+        <source src={videoBg2} type="video/mp4" />
         <track src="#" kind="captions" label="english_captions" />
         <track src="#" kind="captions" label="english_captions" />
       </video>

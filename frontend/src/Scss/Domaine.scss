@@ -1,6 +1,13 @@
-.domain-title {
+.domaine-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.domaine-title {
   text-align: center;
   margin-top: 15rem;
+  display: inline-block;
 }
 
 .domaine-item video {
@@ -12,6 +19,7 @@
   flex-direction: row;
   align-items: center;
   margin-top: 5rem;
+  margin-bottom: 5rem;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;

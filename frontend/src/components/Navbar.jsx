@@ -68,20 +68,6 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link
-              to="/terroir"
-              className="nav-link"
-              onClick={() => setNavOpen(!navOpen)}
-              style={{
-                top: navOpen ? "0" : "70px",
-                transitionDelay: navOpen ? "0.7s" : "0s",
-              }}
-            >
-              <PiWineLight /> Le terroir
-            </Link>
-            <div className="nav-item-wrapper" />
-          </li>
-          <li className="nav-item">
-            <Link
               to="/vins"
               className="nav-link"
               onClick={() => setNavOpen(!navOpen)}
@@ -104,7 +90,7 @@ function Navbar() {
                 transitionDelay: navOpen ? "0.7s" : "0s",
               }}
             >
-              Blog
+              <PiWineLight /> Blog
             </Link>
             <div className="nav-item-wrapper" />
           </li>

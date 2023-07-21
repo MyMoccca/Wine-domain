@@ -1,9 +1,118 @@
-.articles-container {
+.user-articles-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
   grid-gap: 15px 15px;
   justify-content: center;
   align-items: baseline;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
+}
+
+.main-articles-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #dcdcdc;
+  background-image: url(http://www.transparenttextures.com/patterns/textured-paper.png);
+}
+
+.one-article-wrapper {
+  margin-top: 15%;
+}
+
+.one-article-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.one-article-container img {
+  width: 280px;
+  border-radius: 10px;
+  padding: 0.4rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  clip-path: circle(40%);
+}
+
+.one-article-container h2 {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+/*bouton*/
+
+.btn-articles {
+  margin-top: 5%;
+  display: inline-block;
+  color: $background-black;
+  padding: 32px;
+  position: relative;
+  letter-spacing: 1px;
+  background-color: none;
+  margin-left: 2rem;
+
+  &__circle,
+  &__text,
+  &__white-circle {
+    position: absolute;
+  }
+
+  &__circle {
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 100%;
+    width: 100%;
+    box-shadow: 0 0 1px 1px #d89898;
+    transition: 0.3s linear;
+  }
+
+  &__white-circle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    background: #d89898;
+    display: flex;
+    transition: 0.3s ease-in-out;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      margin: auto;
+    }
+  }
+
+  &__text {
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    z-index: 2;
+    padding: 24px 8px;
+    transition: 0.3s linear;
+    font-size: 1.4rem;
+  }
+
+  &:hover {
+    .btn__circle {
+      transform: scale(0);
+    }
+
+    .btn__white-circle {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .btn__text {
+      transform: translate(40px, -50%);
+    }
+  }
+}
+
+.one-article-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }

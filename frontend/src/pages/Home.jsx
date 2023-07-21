@@ -3,6 +3,7 @@ import MainVideo from "../components/MainVideo";
 import WineCarousel from "../components/WineCarousel";
 import FranceCard from "../components/FranceCard";
 import Domaine from "../components/Domaine";
+import ImageCarousel from "../components/ImageCarousel";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <WineCarousel />
         <FranceCard />
       </section>
+      <ImageCarousel />
       <Domaine />
     </div>
   );

@@ -23,30 +23,32 @@ function ArticleDesc() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="desc-container-details">
       {article && (
         <>
           <Helmet>
             <title>{article.title} - notre Blog</title>
             <meta name="description" content={article.resume} />
           </Helmet>
-          <div className="row mx-4 my-4">
-            <h2 className="text-center text-secondary">{article.title}</h2>
-            <h4 className="text-center">{article.subtitle}</h4>
-          </div>
-          <div className="row">
-            <div className="col-6">
+          <div className="one-article-container">
+            <div className="image-one-article">
               <img
                 src={`${import.meta.env.VITE_BACKEND_URL}/assets/images/${
                   article.src
                 }`}
                 alt={article.alt}
-                className="w-100 rounded-2 shadow-sm"
+                className=""
               />
-              <h6 className="text-center">{article.resume}</h6>
             </div>
-            <div className="col-6">
-              <p>{article.text}</p>
+            <h2 className="">{article.title}</h2>
+            <h4 className="">{article.subtitle}</h4>
+            <div className="">
+              <div className="">
+                <h6 className="">{article.resume}</h6>
+              </div>
+              <div className="">
+                <p>{article.text}</p>
+              </div>
             </div>
           </div>
         </>

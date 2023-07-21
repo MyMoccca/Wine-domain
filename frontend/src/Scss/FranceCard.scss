@@ -6,8 +6,8 @@
 }
 
 .FrancePath {
-  stroke-dasharray: 1000;
-  animation: dash 10s linear alternate infinite;
+  stroke-dasharray: 3000;
+  animation: dash 6s linear alternate infinite;
   width: 500px;
   margin-left: auto;
   margin-right: auto;
@@ -25,9 +25,22 @@
   margin-right: auto;
 }
 
+.contact-btn-text {
+  font-size: 1.8rem;
+}
+
+.contact-btn {
+  margin-bottom: 2rem;
+  margin-top: -100px;
+}
+
+.red__cercle {
+  box-shadow: 0 0 2px 2px red;
+}
+
 @keyframes dash {
   from {
-    stroke-dashoffset: 1000;
+    stroke-dashoffset: 3000;
   }
 
   to {

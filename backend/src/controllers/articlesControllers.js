@@ -42,7 +42,7 @@ const edit = async (req, res) => {
     if (error) throw new Error(error);
     await models.images.update(article.src, article.alt, article.id);
     await models.articles.update(article);
-    res.sendStatus(204);
+    res.status(204).json({ msg: "created" });
   } catch (error) {
     console.error(error);
     res.sendStatus(500);

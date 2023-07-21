@@ -12,7 +12,7 @@ const { checkUser } = require("./services/jwt");
 router.get("/articles", articlesControllers.browse);
 router.get("/articles/:id", articlesControllers.read);
 router.put("/articles/:id", checkUser, articlesControllers.edit);
-router.post("/articles", articlesControllers.add);
+router.post("/articles", checkUser, articlesControllers.add);
 router.delete("/articles/:id", checkUser, articlesControllers.destroy);
 
 router.get("/vins", productsControllers.browse);

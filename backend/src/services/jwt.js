@@ -24,5 +24,4 @@ const checkUser = (req, res, next) => {
     res.status(401).json({ msg: "Unauthorized" });
   }
 };
-
 module.exports = { createJwt, checkUser };

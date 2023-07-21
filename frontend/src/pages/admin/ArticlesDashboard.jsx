@@ -58,7 +58,7 @@ function Admindashboard() {
   const updateArticle = async () => {
     try {
       const res = await connexion.put(`/articles/${article.id}`, article);
-      if (res.status === 201) {
+      if (res.status === 204) {
         toast.success(`🦄 Article mis à jour`);
       } else {
         throw new Error(res.statusText);
@@ -82,7 +82,7 @@ function Admindashboard() {
     event.preventDefault();
     try {
       const res = await connexion.delete(`/articles/${article.id}`);
-      if (res.status === 201) {
+      if (res.status === 204) {
         setArticle(articleModel);
         setArticlesToUpdate(
           articlesToUpdate.filter((art) => art.id !== article.id)
