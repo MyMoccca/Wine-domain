@@ -9,7 +9,7 @@ function Domaine() {
     <div className="domaine-wrapper">
       <h1 className="products-title domaine-title">
         {" "}
-        Notre domain au coeur du terroir du vin
+        Notre domaine au coeur des Hautes-Corbières
       </h1>
       <section className="domaine-container">
         <div className="domaine-item">
@@ -20,8 +20,8 @@ function Domaine() {
             width="100%"
           />
           <div className="domaine-description">
-            <h1>Titre item</h1>
-            <h6>texte</h6>
+            <h1>Vinification de chaque cépage séparément</h1>
+            <h4>afin d'extraire au mieux arômes et couleurs</h4>
           </div>
         </div>
         <div className="domaine-item">
@@ -32,8 +32,8 @@ function Domaine() {
             width="100%"
           />
           <div className="domaine-description">
-            <h1>Titre item</h1>
-            <h6>texte</h6>
+            <h1> 25 hectares en agriculture biologique</h1>
+            <h4>situées sur des sols argilo-calcaires schistes</h4>
           </div>
         </div>
         <div className="domaine-item">
@@ -44,8 +44,8 @@ function Domaine() {
             width="100%"
           />
           <div className="domaine-description">
-            <h1>Titre item</h1>
-            <h6>texte</h6>
+            <h1> Les terres authentiques</h1>
+            <h4>de la plus ancienne AOC</h4>
           </div>
         </div>
       </section>

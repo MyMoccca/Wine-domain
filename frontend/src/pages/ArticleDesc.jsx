@@ -28,24 +28,21 @@ function ArticleDesc() {
         <>
           <Helmet>
             <title>{article.title} - notre Blog</title>
-            <meta name="description" content={article.resume} />
+            <meta name={article.resume} content={article.resume} />
           </Helmet>
           <div className="one-article-container">
+            <h1 className="">{article.title}</h1>s
             <div className="image-one-article">
               <img
                 src={`${import.meta.env.VITE_BACKEND_URL}/assets/images/${
                   article.src
                 }`}
                 alt={article.alt}
-                className=""
+                className="header-img-blog"
               />
             </div>
-            <h2 className="">{article.title}</h2>
-            <h4 className="">{article.subtitle}</h4>
+            <h3 className="">{article.subtitle}</h3>
             <div className="">
-              <div className="">
-                <h6 className="">{article.resume}</h6>
-              </div>
               <div className="">
                 <p>{article.text}</p>
               </div>

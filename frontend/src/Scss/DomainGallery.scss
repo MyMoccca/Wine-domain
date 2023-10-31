@@ -9,7 +9,12 @@ div.gallery {
 
 div.gallery ul {
   list-style-type: none;
-  margin-left: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /* animation */

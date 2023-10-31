@@ -35,29 +35,29 @@
   width: 90vmin;
 }
 
-.animated-title>div {
+.animated-title > div {
   height: 50%;
   overflow: hidden;
   position: absolute;
   width: 100%;
 }
 
-.animated-title>div div {
+.animated-title > div div {
   font-size: 10vmin;
   padding: 2vmin 0;
   position: absolute;
 }
 
-.animated-title>div div span {
+.animated-title > div div span {
   display: block;
 }
 
-.animated-title>div.text-top {
+.animated-title > div.text-top {
   border-bottom: 1vmin solid red;
   top: 0;
 }
 
-.animated-title>div.text-top div {
+.animated-title > div.text-top div {
   animation: showTopText 1s;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
@@ -65,15 +65,15 @@
   transform: translate(0, 100%);
 }
 
-.animated-title>div.text-top div span:first-child {
+.animated-title > div.text-top div span:first-child {
   color: #767676;
 }
 
-.animated-title>div.text-bottom {
+.animated-title > div.text-bottom {
   bottom: 0;
 }
 
-.animated-title>div.text-bottom div {
+.animated-title > div.text-bottom div {
   animation: showBottomText 0.5s;
   animation-delay: 1.75s;
   animation-fill-mode: forwards;
@@ -88,18 +88,187 @@
   margin-top: -8rem;
 }
 
+/*Animated birds*/
+.bird {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+  background-size: auto 100%;
+  width: 88px;
+  height: 125px;
+  will-change: background-position;
+
+  animation-name: fly-cycle;
+  animation-timing-function: steps(10);
+  animation-iteration-count: infinite;
+
+  &--one {
+    animation-duration: 1.1s;
+    animation-delay: -0.5s;
+  }
+
+  &--two {
+    animation-duration: 0.9s;
+    animation-delay: -0.75s;
+  }
+
+  &--three {
+    animation-duration: 1.25s;
+    animation-delay: -0.6s;
+  }
+
+  &--four {
+    animation-duration: 1.5s;
+    animation-delay: -0.7s;
+  }
+}
+
+.bird-container {
+  position: absolute;
+  top: 150%;
+  left: -10%;
+  transform: scale(0) translateX(-10vw);
+  will-change: transform;
+
+  animation-name: fly-right-one;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  &--one {
+    animation-duration: 20s;
+    animation-delay: 0;
+  }
+
+  &--two {
+    animation-duration: 21s;
+    animation-delay: 1s;
+  }
+
+  &--three {
+    animation-duration: 19s;
+    animation-delay: 9.5s;
+  }
+
+  &--four {
+    animation-duration: 18s;
+    animation-delay: 8.25s;
+  }
+}
+
+@keyframes fly-cycle {
+  100% {
+    background-position: -900px 0;
+  }
+}
+
+@keyframes fly-right-one {
+  0% {
+    transform: scale(0.3) translateX(-10vw);
+  }
+
+  10% {
+    transform: translateY(2vh) translateX(10vw) scale(0.4);
+  }
+
+  20% {
+    transform: translateY(0vh) translateX(30vw) scale(0.5);
+  }
+
+  30% {
+    transform: translateY(4vh) translateX(50vw) scale(0.6);
+  }
+
+  40% {
+    transform: translateY(2vh) translateX(70vw) scale(0.6);
+  }
+
+  50% {
+    transform: translateY(0vh) translateX(90vw) scale(0.6);
+  }
+
+  60% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+
+  100% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+}
+
+@keyframes fly-right-two {
+  0% {
+    transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+  }
+
+  10% {
+    transform: translateY(0vh) translateX(10vw) scale(0.4);
+  }
+
+  20% {
+    transform: translateY(-4vh) translateX(30vw) scale(0.6);
+  }
+
+  30% {
+    transform: translateY(1vh) translateX(50vw) scale(0.45);
+  }
+
+  40% {
+    transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+  }
+
+  50% {
+    transform: translateY(0vh) translateX(90vw) scale(0.45);
+  }
+
+  51% {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+
+  100% {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+}
 
 @media (max-width: 900px) {
+  .side-picture {
+    display: none;
+  }
   .Wine-secton {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: -8rem;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
   }
 
   .France-card {
-    margin-top: 35%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25rem !important;
+  }
+
+  .carte-container {
+    margin-left: 8rem !important;
+  }
+
+  .texte-descript {
+    margin-left: 4rem;
+    width: 100%;
+  }
+
+  .caroulsel-container {
+    margin-left: 0rem !important;
+  }
+
+  .Image-carousel {
+    width: 200% !important;
+    margin-left: -60%;
   }
 
   .image-carousel img {
@@ -142,15 +311,22 @@
   }
 
   .user-products-container {
-    display: flex;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
-    grid-gap: 15px 15px;
+    display: flex !important;
     justify-content: center;
-    align-items: baseline;
-    max-width: 1200px;
+    align-items: center;
     margin: auto;
-    flex-wrap: nowrap;
+    flex-direction: column;
     align-content: center;
-
+    flex-wrap: nowrap;
+  }
+  .details-product-container {
+    display: flex;
+    width: 50%;
+    margin-top: 20% !important;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    flex-direction: column;
   }
 }

@@ -11,6 +11,7 @@ import ProductDesc from "./pages/ProductDesc";
 import DomainePage from "./pages/DomainePage";
 import TerroirePage from "./pages/TerroirePage";
 import ContactPage from "./pages/ContactPage";
+import MentionsLegales from "./pages/MentionsLegales";
 
 import UserLayout from "./pages/layout/UserLayout";
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="domaine" element={<DomainePage />} />
           <Route path="terroir" element={<TerroirePage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="mentionslegales" element={<MentionsLegales />} />
           <Route path="login" element={<Auth />} />
         </Route>
 

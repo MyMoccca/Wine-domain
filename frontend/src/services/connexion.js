@@ -1,6 +1,6 @@
 const getData = (url) => {
   return fetch(`${import.meta.env.VITE_BACKEND_URL}${url}`, {
-    credentials: "include"
+    credentials: "include",
   })
     .then((res) => res.json())
     .catch((err) => console.error(err));

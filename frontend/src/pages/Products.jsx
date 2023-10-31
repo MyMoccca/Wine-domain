@@ -31,7 +31,7 @@ function Products() {
         />
       </Helmet>
       <div className="main-products-wrapper">
-        <h1 className="products-title">Vins domaine Esclarmonde</h1>
+        <h1 className="products-title">Vins Domaine Esclarmonde</h1>
         <section className="user-products-wrapper">
           <div className="user-products-container">
             {products.map((product) => (

@@ -1,11 +1,14 @@
 .user-articles-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
+  display: flex;
   grid-gap: 15px 15px;
-  justify-content: center;
-  align-items: baseline;
-  max-width: 1400px;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1000px;
   margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
+  margin-bottom: 5%;
 }
 
 .main-articles-wrapper {
@@ -20,13 +23,16 @@
 }
 
 .one-article-container {
+  margin-top: 6%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 800px;
+  padding-top: 4%;
 }
 
-.one-article-container img {
+.one-article-container > img {
   width: 280px;
   border-radius: 10px;
   padding: 0.4rem;
@@ -35,9 +41,33 @@
   clip-path: circle(40%);
 }
 
-.one-article-container h2 {
+.image-one-article img {
+  margin-top: 2%;
+  height: 600px;
+  padding: 0.4rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.one-article-container h1 {
+  margin-top: 1%;
+  margin-bottom: 2%;
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 4rem;
+}
+
+.one-article-container h3 {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 2%;
+}
+
+.one-article-container p {
+  margin-top: 2%;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 7%;
 }
 
 /*bouton*/

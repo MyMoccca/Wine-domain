@@ -44,7 +44,7 @@ function WineCarousel() {
         navigation
         modules={[Pagination, Navigation, Autoplay, EffectFlip]}
       >
-        {wine.slice(1, 4).map((Wine) => (
+        {wine.slice(0, 3).map((Wine) => (
           <SwiperSlide key={Wine.id}>
             <img
               src={`${import.meta.env.VITE_BACKEND_URL}/assets/images/${

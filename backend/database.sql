@@ -39,11 +39,15 @@ CREATE TABLE
 
 INSERT INTO images(src, alt)
 VALUES (
-        'Vendages_2022.jpg',
-        'Lorem Ipsum'
+        'photo24.jpg',
+        'Vendanges 2023 Paziols'
     );
 
-INSERT INTO images(src, alt) VALUES ('photo13.jpg', 'Lorem Ipsum');
+INSERT INTO images(src, alt)
+VALUES (
+        'photo25.jpeg',
+        'Salon vin Rennes 2023'
+    );
 
 INSERT INTO images(src, alt) VALUES ('photo15.jpg', 'Lorem Ipsum');
 
@@ -60,7 +64,7 @@ CREATE TABLE
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
 INSERT INTO tags(label)
-VALUES ("vendanges 2022"), ("hiver"), ("taille"), ("traitement"), ("vendanges 2021"), ("vendanges 2020"), ("mise en bouteuille");
+VALUES ("vendanges 2023"), ("hiver"), ("taille"), ("traitement"), ("vendanges 2021"), ("vendanges 2020"), ("mise en bouteuille");
 
 CREATE TABLE
     article (
@@ -84,10 +88,19 @@ INSERT INTO
     )
 VALUES (
         1,
-        'Titre article 1',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet recusandae corrupti enim at neque sed, corporis eos vel dolores libero! Molestiae minus pariatur sunt sapiente magni asperiores quod, culpa magnam. Ea in deleniti iure quae quos neque. Officia harum quae esse asperiores, reiciendis assumenda optio doloremque non quod voluptatem hic! Corrupti, molestiae placeat neque nisi enim commodi pariatur modi ea. Temporibus, magnam iure dolore inventore vel consectetur, debitis perspiciatis optio nostrum maiores voluptatum ullam ipsum expedita qui ducimus commodi fuga incidunt. Nobis hic eaque odit nemo aliquam, cumque ea dolore. Fuga in corrupti natus, error dolorem autem dicta, omnis, aspernatur hic itaque expedita soluta voluptatum iure id ipsum vero rem quidem vel sapiente aperiam corporis. Magni officia porro incidunt debitis! Qui optio aliquid voluptates dolor doloribus, repellendus amet hic doloremque, perferendis, quo velit! Asperiores quo vitae repudiandae ipsum animi perspiciatis, nesciunt tempora non laborum veniam corrupti quod deleniti. Ea, beatae.',
+        'Vendages 2023',
+        'La récolte 2023 a été une vendange longue commencée fin Août pour le blanc et le rosé et ensuite
+échelonnée du 10 Septembre au 10 Octobre pour nos rouges.',
+        'La récolte 2023 a été une vendange longue commencée fin Août pour le blanc et le rosé et ensuite
+échelonnée du 10 Septembre au 10 Octobre pour nos rouges.',
+        'La principale cause est la sécheresse qui dure depuis plus d’un an mais il y a eu aussi le coup
+d’échaudage fin Août (+ de 40°) qui a brûlé et séché pas mal de grappes, et également l’absence
+d’orage d’été qui, en principe, améliore la récolte.
+Malgré tous ces aléas climatiques, la vendange rentrée est certes inférieure à celle de 2022 mais est
+d’une très bonne qualité.
+Une fois que les travaux en cave seront terminés, remontages, délestages et enfin pressurages, il ne
+nous reste plus qu’à surveiller le vieillissement de nous différentes cuvées avant de les assembler
+courant 2024 afin de les mettre en bouteilles.',
         1
     );
 
@@ -102,81 +115,22 @@ INSERT INTO
     )
 VALUES (
         2,
-        'Titre article 2',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet recusandae corrupti enim at neque sed, corporis eos vel dolores libero! Molestiae minus pariatur sunt sapiente magni asperiores quod, culpa magnam. Ea in deleniti iure quae quos neque. Officia harum quae esse asperiores, reiciendis assumenda optio doloremque non quod voluptatem hic! Corrupti, molestiae placeat neque nisi enim commodi pariatur modi ea. Temporibus, magnam iure dolore inventore vel consectetur, debitis perspiciatis optio nostrum maiores voluptatum ullam ipsum expedita qui ducimus commodi fuga incidunt. Nobis hic eaque odit nemo aliquam, cumque ea dolore. Fuga in corrupti natus, error dolorem autem dicta, omnis, aspernatur hic itaque expedita soluta voluptatum iure id ipsum vero rem quidem vel sapiente aperiam corporis. Magni officia porro incidunt debitis! Qui optio aliquid voluptates dolor doloribus, repellendus amet hic doloremque, perferendis, quo velit! Asperiores quo vitae repudiandae ipsum animi perspiciatis, nesciunt tempora non laborum veniam corrupti quod deleniti. Ea, beatae.',
+        'Salons des vins !',
+        'En ce début d’Automne, nous voilà repartis sur la route des salons des vins afin de venir vous faire
+déguster nos dernières cuvées.',
+        'En ce début d’Automne, nous voilà repartis sur la route des salons des vins afin de venir vous faire
+déguster nos dernières cuvées.',
+        'En ce début d’Automne, nous voilà repartis sur la route des salons des vins afin de venir vous faire
+déguster nos dernières cuvées.
+Nous serons du 27 au 29 Octobre au MEET de Toulouse (31) mais aussi en même temps au parc des
+expo de Rennes (35).
+Nous poursuivrons notre route jusqu’à Thonon les Bains (74) du 10 au 12 Novembre et nous serons
+pour la journée du 12 Novembre à Bout du Pont de L’Arn (81).
+Le week-end du 17 au 19 Novembre, ce sera à Nantes (44) et à St Marcellin (42) que vous pourrez
+nous trouver, puis c’est à Limoges (87) du 24 au 26 Novembre que nous clôturerons les salons pour
+2023 avant de repartir sur la route début 2024.
+N’hésitez pas à nous demander des invitations pour les salons, on vous attend nombreux.',
         2
-    );
-
-INSERT INTO
-    article(
-        id,
-        title,
-        subtitle,
-        resume,
-        text,
-        image_id
-    )
-VALUES (
-        3,
-        'Titre article 3',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet recusandae corrupti enim at neque sed, corporis eos vel dolores libero! Molestiae minus pariatur sunt sapiente magni asperiores quod, culpa magnam. Ea in deleniti iure quae quos neque. Officia harum quae esse asperiores, reiciendis assumenda optio doloremque non quod voluptatem hic! Corrupti, molestiae placeat neque nisi enim commodi pariatur modi ea. Temporibus, magnam iure dolore inventore vel consectetur, debitis perspiciatis optio nostrum maiores voluptatum ullam ipsum expedita qui ducimus commodi fuga incidunt. Nobis hic eaque odit nemo aliquam, cumque ea dolore. Fuga in corrupti natus, error dolorem autem dicta, omnis, aspernatur hic itaque expedita soluta voluptatum iure id ipsum vero rem quidem vel sapiente aperiam corporis. Magni officia porro incidunt debitis! Qui optio aliquid voluptates dolor doloribus, repellendus amet hic doloremque, perferendis, quo velit! Asperiores quo vitae repudiandae ipsum animi perspiciatis, nesciunt tempora non laborum veniam corrupti quod deleniti. Ea, beatae.',
-        3
-    );
-
-INSERT INTO
-    article(
-        id,
-        title,
-        subtitle,
-        resume,
-        text,
-        image_id
-    )
-VALUES (
-        4,
-        'Titre article 4',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet recusandae corrupti enim at neque sed, corporis eos vel dolores libero! Molestiae minus pariatur sunt sapiente magni asperiores quod, culpa magnam. Ea in deleniti iure quae quos neque. Officia harum quae esse asperiores, reiciendis assumenda optio doloremque non quod voluptatem hic! Corrupti, molestiae placeat neque nisi enim commodi pariatur modi ea. Temporibus, magnam iure dolore inventore vel consectetur, debitis perspiciatis optio nostrum maiores voluptatum ullam ipsum expedita qui ducimus commodi fuga incidunt. Nobis hic eaque odit nemo aliquam, cumque ea dolore. Fuga in corrupti natus, error dolorem autem dicta, omnis, aspernatur hic itaque expedita soluta voluptatum iure id ipsum vero rem quidem vel sapiente aperiam corporis. Magni officia porro incidunt debitis! Qui optio aliquid voluptates dolor doloribus, repellendus amet hic doloremque, perferendis, quo velit! Asperiores quo vitae repudiandae ipsum animi perspiciatis, nesciunt tempora non laborum veniam corrupti quod deleniti. Ea, beatae.',
-        4
-    );
-
-INSERT INTO
-    article(
-        id,
-        title,
-        subtitle,
-        resume,
-        text,
-        image_id
-    )
-VALUES (
-        5,
-        'Titre article 5',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet recusandae corrupti enim at neque sed, corporis eos vel dolores libero! Molestiae minus pariatur sunt sapiente magni asperiores quod, culpa magnam. Ea in deleniti iure quae quos neque. Officia harum quae esse asperiores, reiciendis assumenda optio doloremque non quod voluptatem hic! Corrupti, molestiae placeat neque nisi enim commodi pariatur modi ea. Temporibus, magnam iure dolore inventore vel consectetur, debitis perspiciatis optio nostrum maiores voluptatum ullam ipsum expedita qui ducimus commodi fuga incidunt. Nobis hic eaque odit nemo aliquam, cumque ea dolore. Fuga in corrupti natus, error dolorem autem dicta, omnis, aspernatur hic itaque expedita soluta voluptatum iure id ipsum vero rem quidem vel sapiente aperiam corporis. Magni officia porro incidunt debitis! Qui optio aliquid voluptates dolor doloribus, repellendus amet hic doloremque, perferendis, quo velit! Asperiores quo vitae repudiandae ipsum animi perspiciatis, nesciunt tempora non laborum veniam corrupti quod deleniti. Ea, beatae.',
-        5
-    );
-
-INSERT INTO
-    article(
-        title,
-        subtitle,
-        resume,
-        text,
-        image_id
-    )
-VALUES (
-        'Titre article 6',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia illo tempora perferendis suscipit excepturi cum.',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero iste debitis fugit, nihil recusandae aut quisquam tempore reprehenderit accusantium quasi ad officiis officia ilENGINE = InnoDB DEFAULT CHARSET = utf8;, magnam iure dolore inventore vel consectetur, debitis perspiciatis optio nostrum maiores voluptatum ullam ipsum expedita qui ducimus commodi fuga incidunt. Nobis hic eaque odit nemo aliquam, cumque ea dolore. Fuga in corrupti natus, error dolorem autem dicta, omnis, aspernatur hic itaque expedita soluta voluptatum iure id ipsum vero rem quidem vel sapiente aperiam corporis. Magni officia porro incidunt debitis! Qui optio aliquid voluptates dolor doloribus, repellendus amet hic doloremque, perferendis, quo velit! Asperiores quo vitae repudiandae ipsum animi perspiciatis, nesciunt tempora non laborum veniam corrupti quod deleniti. Ea, beatae.',
-        6
     );
 
 CREATE TABLE
@@ -190,7 +144,7 @@ CREATE TABLE
 
 INSERT INTO
     article_to_tags(article_id, tags_id)
-VALUES (1, 1), (1, 2), (1, 4), (1, 5), (2, 1), (2, 2), (2, 4), (2, 5), (3, 1), (3, 3), (3, 4), (3, 6), (4, 1), (4, 3), (4, 4), (4, 7), (5, 1), (5, 3), (5, 4), (5, 7), (6, 1), (6, 3), (6, 4), (6, 7);
+VALUES (1, 1), (1, 2), (1, 4), (1, 5), (2, 1), (2, 2), (2, 4), (2, 5);
 
 CREATE TABLE
     wineimages (
@@ -203,42 +157,42 @@ INSERT INTO
     wineimages(src, alt)
 VALUES (
         'Impulsif-rose-2022.png',
-        'Impulsif rosé 2022'
+        'Domaine Esclarmonde Impulsif vin rosé 2022'
     );
 
 INSERT INTO
     wineimages(src, alt)
 VALUES (
-        'Impulsif-rose-2022.png',
-        'Impulsif rosé 2022'
+        'Impulsif-blanc-2022.png',
+        'Domaine Esclarmonde Impulsif blanc 2022'
     );
 
 INSERT INTO
     wineimages(src, alt)
 VALUES (
-        'Impulsif-rose-2022.png',
-        'Impulsif rosé 2022'
-    );
-
-INSERT INTO
-    wineimages(src, alt)
-VALUES (
-        'puPartage-2022.png',
-        'Impulsif rosé 2022'
-    );
-
-INSERT INTO
-    wineimages(src, alt)
-VALUES (
-        'Couvee-2guys-2022.png',
-        'Impulsif rosé 2022'
+        'Impulsif-rouge-2022.png',
+        'Domaine Esclarmonde Impulsif rouge 2022'
     );
 
 INSERT INTO
     wineimages(src, alt)
 VALUES (
         'Partage-2022.png',
-        'Impulsif rosé 2022'
+        'Domaine Esclarmonde Partage rouge 2022'
+    );
+
+INSERT INTO
+    wineimages(src, alt)
+VALUES (
+        'Couvee-2guys-2022.png',
+        'Domaine Esclarmonde Couvee-2guys rouge 2022'
+    );
+
+INSERT INTO
+    wineimages(src, alt)
+VALUES (
+        'Authentique-2019.png',
+        'Domaine Esclarmonde Authentique rouge 2019'
     );
 
 CREATE TABLE
@@ -248,7 +202,7 @@ CREATE TABLE
         year VARCHAR(255) NOT NULL,
         type VARCHAR(255) NOT NULL,
         variety VARCHAR(255) NOT NULL,
-        details varchar (255) NOT NULL,
+        details longtext NOT NULL,
         price varchar (255) NOT NULL,
         wineimage_id INT NOT NULL,
         CONSTRAINT wineimage_id_FK FOREIGN KEY (wineimage_id) REFERENCES images(id) ON DELETE CASCADE
@@ -269,9 +223,11 @@ VALUES (
         1,
         'Impulsif',
         '2022',
-        'Rosé',
-        '30 % Carigan blanc, 70 % Carignan rouge ',
-        'wine description',
+        'Rose',
+        '90 % Granache, 10 % Syrah ',
+        'Rosé sec, fruité avec des notes de fruits rouges, à
+consommer frais dans les 2 ans. Méthode de vinification : égrappage et pressurage direct
+Méthode d’élevage : Cuve environ 6 mois Méthode culturale : Agriculture Biologique',
         '8,00 €',
         1
     );
@@ -292,8 +248,9 @@ VALUES (
         'Impulsif',
         '2022',
         'Blanc',
-        '100 % Carigan blanc ',
-        'wine description',
+        '100 % Maccabeu ',
+        'Blanc sec, fruité à consommer frais dans les 2 ans. Méthode de vinification : égrappage et pressurage direct
+Méthode d’élevage : Cuve environ 6 mois. Méthode culturale : Agriculture Biologique',
         '8,00 €',
         2
     );
@@ -315,7 +272,7 @@ VALUES (
         '2022',
         'Rouge',
         '33 % Carigan rouge, 33 % Grenache rouge, 33 % Syrah, ',
-        'wine description',
+        'Rouge fruité, rond, équilibré que l’on conseille en apéritif sur plateau de charcuterie, grillade, fromage élevés. Il peut se conserver de 5 à 10 ans. Méthode de vinification :  Traditionnelle, égrappage, longue macération de 28 à 35 jours selon les cuves avec travail journalier du vin, remontage, délestage ou pigeage. Méthode d’élevage : Cuve environ 9 mois',
         '8,00 €',
         3
     );
@@ -337,7 +294,10 @@ VALUES (
         '2022',
         'Rouge',
         '30 % Carigan rouge, 30 % Grenache rouge, 40 % Syrah ',
-        'wine description',
+        'C’est un vin sur des notes de fruits noirs, charpenté, tanique avec une belle longueur en bouche que l’on conseille sur des gibiers, cassoulets, plats en sauce, fromage élevés. Il peut se conserver de 5 à 10 ans.
+Méthode de vinification :  Traditionnelle, égrappage, longue macération de 28 à 35 jours selon les cuves avec travail journalier du vin, remontage, délestage ou pigeage.
+Méthode d’élevage : Cuve environ 9 mois.
+Méthode culturale : Agriculture Biologique',
         '10,00 €',
         4
     );
@@ -359,7 +319,7 @@ VALUES (
         '2022',
         'Rouge',
         '80 % Carigan rouge, 20 % Grenache rouge ',
-        'wine description',
+        'C’est un hommage aux grands-pères, un Fitou comme on faisait avant, vin puissant et fruité à la fois, que l’on conseille sur charcuterie, grillade, fromage élevés. Il peut se conserver de 5 à 10 ans. Méthode de vinification :  Traditionnelle, égrappage, longue macération de 28 à 35 jours selon les cuves avec travail journalier du vin, remontage, délestage ou pigeage. Méthode d’élevage : Cuve environ 9 mois. Méthode culturale : Agriculture Biologique',
         '13,50 €',
         5
     );
@@ -380,8 +340,12 @@ VALUES (
         'Authentique',
         '2022',
         'Rouge',
-        '80 % Carigan rouge, 20 % Syrah ',
-        'wine description',
+        '80 % Carigan rouge, 20 % Syrah',
+        'C’est un vin sur des notes de fruits noirs, charpenté, tanique avec une belle longueur en bouche que l’on conseille sur des gibiers, cassoulets, plats en sauce, fromage élevés. Il peut se conserver de 5 à 10 ans.
+Méthode de vinification :  Traditionnelle, égrappage, longue macération de 28 à 35 jours selon les cuves avec travail journalier du vin, remontage, délestage ou pigeage.
+Méthode d’élevage : Elevage dans 2 amphores en terre
+cuite de 300 litres et 250 litres durant 18 mois environ.
+Méthode culturale : Agriculture Biologique',
         '25,00 €',
         6
     );

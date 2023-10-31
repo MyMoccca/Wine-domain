@@ -1,0 +1,22 @@
+.ML-container {
+  height: 100vh;
+  margin-top: 8%;
+  width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ML-container section {
+  margin-bottom: 2%;
+}
+
+.ML-container h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: $red;
+  margin-bottom: 2%;
+}
