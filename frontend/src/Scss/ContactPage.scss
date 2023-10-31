@@ -3,6 +3,7 @@
   padding-bottom: 0.5rem;
   font-size: 3rem;
   margin-top: 5%;
+  margin-bottom: 2%;
   border-bottom: 4px solid $red;
   display: inline-block;
   margin-left: auto;
@@ -39,6 +40,21 @@
   animation: bounce 1.5s infinite;*/
 }
 
+.big-number {
+  font-size: 1.8rem;
+}
+
+.email-contact {
+  color: black;
+  font-size: 1.3rem;
+  padding-top: 1rem;
+  display: block;
+}
+
+a.email-contact:hover {
+  color: $red;
+}
+
 ::-webkit-input-placeholder {
   font-size: 1.3em;
 }
@@ -51,8 +67,6 @@
 
 .animated:hover {
   border-bottom: 5px solid $red;
-  height: 40px;
-  width: 340px;
   transition: ease 0.5s;
 }
 
@@ -64,8 +78,8 @@
 
 .message:hover {
   border-bottom: 5px solid $red;
-  height: 15em;
-  width: 340px;
+  height: 12em;
+  /*width: 340px;*/
   transition: ease 0.5s;
 }
 
@@ -91,9 +105,6 @@ button.submit {
   min-width: 200px;
   height: 60px;
   position: relative;
-}
-
-button.submit:hover {
 }
 
 .non-valid {

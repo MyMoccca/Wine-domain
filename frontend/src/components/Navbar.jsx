@@ -19,9 +19,9 @@ function Navbar() {
     <div className="nav">
       <div className="nav-container">
         <div className="navbar">
-          <div className="logo">
-            <img src={logoRed} width="150px" alt="logo" />
-          </div>
+          <Link className="logo" to="/">
+            <img src={logoRed} width="150px" alt="logo Domaine Esclarmonde" />
+          </Link>
           <div className="menu-toggle" onClick={() => setNavOpen(!navOpen)}>
             <div className={navOpen ? "hamBox hamBoxOpen" : "hamBox"}>
               <span className={navOpen ? "lineTop spin" : "lineTop"} />
@@ -104,7 +104,7 @@ function Navbar() {
                 transitionDelay: navOpen ? "0.8s" : "0s",
               }}
             >
-              <PiWineThin /> Nous trouver
+              <PiWineThin /> Nous contacter
             </Link>
             <div className="nav-item-wrapper" />
           </li>

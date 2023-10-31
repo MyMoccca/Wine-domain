@@ -7,6 +7,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import slide1 from "../assets/slide1.jpg";
+import slide4 from "../assets/slide4.jpg";
 
 function ImageCarousel() {
   return (
@@ -33,10 +34,7 @@ function ImageCarousel() {
           <img src={slide1} alt={slide1} />
         </SwiperSlide>
         <SwiperSlide key="slide-images">
-          <img src={slide1} alt={slide1} />
-        </SwiperSlide>
-        <SwiperSlide key="slide-images">
-          <img className="image-carousel" src={slide1} alt={slide1} />
+          <img src={slide4} alt={slide4} />
         </SwiperSlide>
       </Swiper>
     </div>

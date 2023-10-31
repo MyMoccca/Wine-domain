@@ -69,6 +69,23 @@ function ContactPage() {
     <div>
       <div className="container-form">
         <h1 className="contactTitle">Contactez nous</h1>
+
+        <h3>
+          {" "}
+          ☎️ <span className="big-number">06</span>🍇
+          <span className="big-number">33</span>🍇
+          <span className="big-number">11</span>🍇
+          <span className="big-number">08</span>🍇
+          <span className="big-number">07 </span>
+        </h3>
+        <h4>
+          <a
+            href="mailto: gaetan.esclarmonde@orange.fr"
+            className="email-contact"
+          >
+            📩 envoyer le mail
+          </a>
+        </h4>
         <form className="ContactForm" ref={form} onSubmit={sendEmail}>
           <label className="LabelForm">
             Prénom

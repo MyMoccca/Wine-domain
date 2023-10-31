@@ -24,7 +24,8 @@
     "react-touch-drag-slider": "^2.2.5",
     "styled-components": "^5.3.11",
     "swiper": "^10.0.4",
-    "vite": "^4.0.4"
+    "vite": "^4.0.4",
+    "react-meta-tags": "^1.0.1"
   },
   "devDependencies": {
     "eslint": "^8.32.0",

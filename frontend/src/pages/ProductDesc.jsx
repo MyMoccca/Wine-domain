@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import connexion from "../services/connexion";
 
 function ProductDesc() {
@@ -45,7 +45,17 @@ function ProductDesc() {
               <h3 className="text-center">{product.year}</h3>
               <h4 className="text-center">{product.type}</h4>
               <h5 className="text-center"> {product.variety}</h5>
-              <h5 className="price"> {product.price}</h5>
+              <h6 className="description-product"> {product.details}</h6>
+              <p className="price"> {product.price}</p>
+              <Link to="/contact" className="btn-articles">
+                <span className="btn__circle red__cercle" />
+                <span className="btn__white-circle">
+                  <svg id="icon-arrow-right" viewBox="0 0 21 12">
+                    <path d="M17.104 5.072l-4.138-4.014L14.056 0l6 5.82-6 5.82-1.09-1.057 4.138-4.014H0V5.072h17.104z" />
+                  </svg>
+                </span>
+                <span className="btn__text"> Commander le vin</span>
+              </Link>
             </div>
           </div>
         </>

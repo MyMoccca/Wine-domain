@@ -25,21 +25,37 @@ function FranceCard() {
           <span className="btn__text contact-btn-text"> Nous trouver</span>
         </Link>
       </div>
-      <h1 className="title-terroir">Le vin au coeur du territoir</h1>
-      <p className="texte-terroir">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis purus
-        ligula, sagittis vitae orci in, placerat condimentum ex. Sed tristique
-        congue nisl, ac convallis leo dapibus convallis. Aenean eros urna,
-        viverra a dictum fringilla, viverra vel leo. Curabitur at diam ut enim
-        molestie facilisis ut eu mi. Nam vitae risus dolor. Pellentesque orci
-        leo, commodo eu nulla nec, lacinia euismod justo. Mauris lacus mauris,
-        posuere id augue consequat, porta sollicitudin elit. Vivamus imperdiet
-        ante mi, at porttitor eros fermentum eget. Suspendisse consequat tellus
-        eu venenatis mollis. Suspendisse nec mi sed elit pellentesque tincidunt
-        quis in metus. Maecenas pretium magna at metus aliquam lacinia. Nunc vel
-        odio laoreet, pellentesque ex ac, porta libero. Proin lacinia mollis mi,
-        vel fermentum velit.
-      </p>
+      <div className="texte-descript">
+        <h1 className="main-title">Domaine Esclarmonde</h1>
+        <h2 className="title-terroir">Le vin au coeur du territoir</h2>
+        <p className="texte-terroir">
+          C'est à Paziols, en plein coeur des Hautes-Corbières, sur les terres
+          de la plus ancienne des AOP rouge du Languedoc, le Fitou, que nous
+          avons créé Luc et Gaëtan, père et fils, notre domaine en 2013, après
+          avoir été en cave coopérative durant 5 générations.
+        </p>
+        <p className="texte-terroir">
+          Nos 25 hectares en agriculture biologique sont situées sur des sols
+          argilo-calcaires schistes, et galets répartis en 10 hectares de
+          Grenache noir, 8 hectres de Carignan noir, 7 hectares de Syrah et 0.2
+          hectare de Macabeu.
+        </p>
+
+        <p className="texte-terroir">
+          Ce terroire magnifique entre vallées étroites et côteaux aux pentes
+          abruptes sur sols caillouteux, peu profonds et chauds donnent des ins
+          incomparables.
+        </p>
+        <p className="texte-terroir">
+          Avec les conseils de l'oenologue de la famille Marc Esclarmonde,
+          vendanges mécaniques, uniquement le matin, sauf pour une vieille
+          parcelle centenaire de Carignan vandangée à la main en famille, puis
+          travail suivi à la cave avec égrappage et tri. Nous vinifions ensuite
+          chaque cépage et chaque parcelle séparément, (remontage, délestage et
+          pigeage journalier) afin d'extraire au mieux arômes et couleurs, ce
+          qui donne naissance à plusieurs cuvées.
+        </p>
+      </div>
     </div>
   );
 }

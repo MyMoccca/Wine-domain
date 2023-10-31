@@ -10,9 +10,10 @@ function ProductCard({ product }) {
         <div className="">
           <img
             // eslint-disable-next-line prettier/prettier
-            src={`${import.meta.env.VITE_BACKEND_URL}/assets/images/${product.src
+            src={`${import.meta.env.VITE_BACKEND_URL}/assets/images/${
+              product.src
               // eslint-disable-next-line prettier/prettier
-              }`}
+            }`}
             alt={product.alt}
             className=""
           />
