@@ -24,7 +24,7 @@
      "build": "npm run build"
   },
   "keywords": [],
-  "author": "Wild Code School",
+  "author": "Marta Miszke",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^7.6.0",
