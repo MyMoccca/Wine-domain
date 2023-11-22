@@ -26,8 +26,8 @@ function Products() {
       <Helmet>
         <title>Vins domaine Esclarmonde</title>
         <meta
-          name="description"
-          content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut repellendus deleniti nam corrupti eius ipsam accusantium pariatur nesciunt eos, perspiciatis saepe eveniet. Ut aperiam, velit sit alias eaque dignissimos quis."
+          name="Vins domaine Esclarmonde"
+          content="Vigneron independant à Paziols, vin bio nature, Fitou"
         />
       </Helmet>
       <div className="main-products-wrapper">

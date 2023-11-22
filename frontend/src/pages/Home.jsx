@@ -1,28 +1,13 @@
 import React from "react";
-import MetaTags from "react-meta-tags";
 import MainVideo from "../components/MainVideo";
 import WineCarousel from "../components/WineCarousel";
 import FranceCard from "../components/FranceCard";
 import Domaine from "../components/Domaine";
 import ImageCarousel from "../components/ImageCarousel";
-import metaimage from "../assets/slide1.jpg";
 
 export default function Home() {
   return (
     <div>
-      <MetaTags>
-        <title>Domaine Esclarmonde</title>
-        <meta
-          name="description"
-          content="Vigneron independant familial au coeur des Hautes Corbières, à Paziols. Vins de l'agriculture biologique : Rosé, Blanc, Rouge."
-        />
-        <meta
-          property="og:title"
-          content="Domaine Esclarmonde - vigneron independant à Paziols"
-        />
-        <meta property="og:image" content={metaimage} />
-      </MetaTags>
-
       <header className="App-header">
         <MainVideo />
       </header>
