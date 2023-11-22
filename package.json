@@ -23,7 +23,7 @@
     "fix": "cross-env-shell \"cd ./frontend && $npm_package_config_cli run fix && cd ../backend && $npm_package_config_cli run fix\""
   },
   "keywords": [],
-  "author": "Wild Code School",
+  "author": "Marta Miszke",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^7.6.0",
